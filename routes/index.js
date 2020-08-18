@@ -4,7 +4,7 @@ var router = express.Router();
 const ArticulosController = require('../controllers/ArticulosController');
 const InicioController = require('../controllers/InicioController');
 const EventController = require('../controllers/EventController');
-
+console.log('dsgfiuagf');
 router.get('/', InicioController.Inicio);
 
 router.get('/eventos', EventController.Eventos);
