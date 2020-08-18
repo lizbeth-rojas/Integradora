@@ -1,6 +1,8 @@
 const Eventos = (req, res) => {
-    res.render('eventos.ejs', {
-        title: 'TinyDesigns - Eventos'
+    res.render('eventosb.hbs', {
+        title: 'TinyDesigns - Eventos',
+        name: req.session.correo,
+        logueado: req.session.loggedin 
     })
 }
 

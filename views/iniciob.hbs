@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="lib/fontawesome-free-5.14.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="lib/fontawesome-free-5.14.0-web/css/brands.css" rel="stylesheet">
+    <link href="lib/fontawesome-free-5.14.0-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="lib/icofont/icofont.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link href="https://allfont.es/allfont.css?fonts=alexandra-script" rel="stylesheet" type="text/css" />
+    <link href="lib/owl.carousel/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/inicio1.css" rel="stylesheet">
+    <link href="css/inicio2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>TinyDesigns - Inicio</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header id="header" class="fixed-top header-transparent">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-11 d-flex align-items-center">
+            <a href="/" class="mr-auto"><img src="img/nav-tinyy.png" style="float:left; margin-left:-40px;"></a>
+            <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                <li class="active"><a href="/">inicio</a></li>
+                <li><a href="/eventos">Eventos</a></li>
+                <li class="drop-down"><a href="/articulos">Articulos</a><!--<i class="fi fi-angle-bottom"></i>-->
+                  <ul>
+                    <li><a href="/camisas">Camisas</a></li>
+                    <li><a href="/termos">Termos</a></li>
+                    <li><a href="/invitaciones">Invitaciones</a></li>
+                    <li><a href="/globos">Globos</a></li>
+                  </ul>
+                </li>
+                {{#if logueado}}
+                <li class="drop-down"><a href="">{{ name }}</a>
+                  <ul>
+                    <li><a href="/cerrar">Cerrar sesion</a></li>
+                  </ul>
+                </li>
+                
+                {{else}}
+                <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
+                {{/if}}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" name="inicio" action="/login">
+                            
+                            <div class="modal-body">
+                                <img class="img" src="imagenes/avatarx2.png" alt="">
+                                <h2 class="letras">Iniciar sesion</h2>
+                                <div class="form-group row">
+                                    <input class="form-control form-control-lg formularios" name="correo" type="email" placeholder="Correo">
+                                </div>
+                                <div class="form-group row">
+                                    <input class="form-control form-control-lg formularios" name="pass" type="password" placeholder="Contraseña">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                            </div>
+                        </form>
+                        {{#if message }}
+                            <h4 class="alert alert-danger mt-3" style="text-align: center;">{{message}}</h4>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!--  Carrousel  -->
+    <section id="intro">
+      <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+          <ol class="carousel-indicators"></ol>
+          <div class="carousel-inner">
+          <!--Imagen 1-->
+            <div class="carousel-item active" style="background-image: url(img/1.jpg)">
+              <div class="carousel-container">
+                <div class="container">
+                  <h2 class="animate__animated animate__fadeInDown">Somos profesionales en diseños de eventos</h2>
+                  <p class="animate__animated animate__fadeInUp">Ofrecemos servicios de calidad, innovando cada diseño y cuidando el medio ambiente con el uso de los materiales que usamos </p>
+                </div>
+              </div>
+            </div>
+            <!--Imagen 2-->
+            <div class="carousel-item" style="background-image: url(img/2.jpg)">
+              <div class="carousel-container">
+                <div class="container">
+                  <h2 class="animate__animated animate__fadeInDown">Diseño y creación de articulos</h2>
+                  <p class="animate__animated animate__fadeInUp">Articulos con diferentes diseños como playeras, termos, gorras</p>
+                </div>
+              </div>
+            </div>
+            <!--Imagen 3-->
+            <div class="carousel-item" style="background-image: url(img/3.jpg)">
+              <div class="carousel-container">
+                <div class="container">
+                  <h2 class="animate__animated animate__fadeInDown">Creación de invitaciones</h2>
+                  <p class="animate__animated animate__fadeInUp">Creamos e imprimimos tus invitaciones con la mejor calidad, para cualquier tipo de evento</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--Controles-->
+          <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon fas fa-arrow-circle-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span><!--<i class="fas fa-angle-left"></i>-->
+          </a>
+          <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon fas fa-arrow-circle-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</i></span><!--<i class="fas fa-arrow-circle-right">-->
+          </a>
+        </div>
+      </div>
+    </section>
+    <main id="main">
+      <section id="about">
+        <div class="container"  data-aos="fade-up">
+          <header class="section-header">
+            <h3>Nuestros servicios</h3>
+            <p>Somos una empresa especializada en el diseño de eventos</p>
+          </header>
+          <div class="row about-cols">
+            <div class="col-md-4" data-aos="fade-left" data-aos-delay="100">
+              <div style="height:470px;" class="about-col">
+                <div class="img">
+                  <img src="img/event1.jpg" style="height:300px; width:360px;" class="img-fluid">
+                </div>
+                <h2 class="title">Diseños de eventos</h2>
+                <p>Creamos eventos para: bodas, fiestas de XV, bautizos, graduaciones. Ofrecemos eventos ya establecidos y el apoyo para perzonalizar tu evento</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div style="height:470px;" class="about-col">
+                <div class="img">
+                  <img src="img/art-termo2.jpg" style="height:300px; " class="img-fluid">
+                </div>
+                <h2 class="title">Articulos diseñados</h2>
+                <p>En los eventos puede ofrecer distintos articulos perzonalizados a su gusto para que los invitados tengan un recuerdo o simplemente un regalo</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-right" data-aos-delay="300" >
+              <div class="about-col" style="height:470px;">
+                <div class="img">
+                  <img src="img/invitacion4.jpg"  class="img-fluid">
+                </div>
+                <h2 class="title"><a href="/invitaciones">Invitaciones</a></h2>
+                <p>También podemos ayudarte a crear tus Invitaciones para cualquier tipo de celebración</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="container"><!--data-aos="fade-down"-->
+          <header class="section-header">
+            <h3>¿Cómo trabajamos?</h3>
+            <p>En tiny Designs nos distinguimos por nuestros valores, creatividad y por nuestra responsabilidad de brindar un servicio de confianza</p>
+          </header>
+          <div class="skills-content">
+            <div class="progress">
+              <div class="progress-bar" style="background-color: #fbb8ff;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill">Valores<i class="val">100%</i></span>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" style="background-color: #aeffd8;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill">Innovación<i class="val">100%</i></span>
+              </div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" style="background-color: #aec4ff;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill">Creatividad<i class="val">100%</i></span>
+              </div>
+            </div>
+            </div>
+          </div>
+      </section>
+      <section id="portfolio" class="section-bg">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h3 class="section-title">algunos diseños</h3>
+          </header>
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="row portfolio-container" data-aos="zoom-in" data-aos-delay="200">
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/large1.png" class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Decoración de cumpleaños</h4>
+                    <p>Fiesta de cumpleaños</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/large2.jpg" class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Bautizo</h4>
+                    <p>Celebración de un bautizo</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:755px; margin-top:-380px;" >
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/large4.jpg"  class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Fiesta infantil</h4>
+                    <p>Mesa de snack para fiesta de niña</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/art-termo2.jpg"  class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Graduación</h4>
+                    <p>Termos diseñados para graduaciones</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item">
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/invitacion5.jpg" class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Invitación para boda</h4>
+                    <p>Invitaciones para una boda</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:755px; margin-top:-380px;" >
+                <div class="portfolio-wrap">
+                  <figure>
+                    <img src="img/event2.jpg"  class="img-fluid" alt="">
+                  </figure>
+                  <div class="portfolio-info">
+                    <h4>Baby shower</h4>
+                    <p>Diseño de mesa principal para baby shower</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="facts">
+        <div class="container" data-aos="fade-up">
+          <header class="section-header">
+            <h3>Hechos de Tiny Designs</h3>
+            <p>En Tiny Designs hemos logrado complacer a nuestros clientes a traves de la experiencia obtenida durante nuestra trayectoria, nuestros resultados en poco tiempo lo demuestran</p>
+          </header>
+          <div class="row counters">
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">3</span>
+              <p>Años de experiencia</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">89</span>
+              <p>Clientes satisfechos</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">150</span>
+              <p>Proyectos</p>
+            </div>
+            <div class="col-lg-3 col-6 text-center">
+              <span data-toggle="counter-up">10</span>
+              <p>Trabajadores conforman el equipo</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section-bg">
+        <div class="container" data-aos="fade-up">
+          <div class="section-header">
+            <h3>Contacto con Tiny Designs</h3>
+            <p>Contáctanos para ayudarte a diseñar y crear tu próximo evento</p>
+          </div>
+          <div class="row contact-info">
+            <div class="col-md-4" data-aos="fade-left">
+              <div class="contact-address">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Ubicación:</h3>
+                <address>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</address>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="contact-phone">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Telefono:</h3>
+                <p>(871)596-1588</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-right">
+              <div class="contact-email">
+                <i class="fas fa-envelope"></i>
+                <h3>Email:</h3>
+                <p>tinydesigns07@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+<!--libs, plugins JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="lib/waypoints/jquery.waypoints.min.js"></script>
+<script src="lib/counterup/counterup.min.js"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="lib/owl.carousel/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="js/main.js"></script>
+</body>
+<footer class="page-footer font-small stylish-color-dark pt-4" id="foot">
+<div class="container text-center text-md-left">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
+      <p>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</p>
+      <p><i class="fas fa-envelope-open"></i>   tinydesigns07@gmail.com</p>
+      <p><i class="fab fa-whatsapp-square"></i>   (871)596-1588</p>
+      <p><a href="https://www.facebook.com/tinydesignsS"><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</a></p>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-5 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Diseño para eventos sociales</h6>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/graduaciones">Graduaciones</a>
+        </li>
+        <li>
+          <a href="/infantiles">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="bodas">Bodas</a>
+        </li>
+        <li>
+          <a href="/xv">Fiestas de XV</a>
+        </li>
+      </ul>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Venta de articulos</h6>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/invitaciones">Invitaciones</a>
+        </li>
+        <li>
+          <a href="/globos">Globos</a>
+        </li>
+        <li>
+          <a href="/termos">Termos</a>
+        </li>
+        <li>
+          <a href="/camisas">Camisas</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-2 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Acerca de nosotros</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/">¿Quiénes somos?</a>
+        </li>
+        <li>
+          Aviso de privacidad
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+{{#if logueado}}
+<hr>
+{{else}}             
+<hr>
+<ul class="list-unstyled list-inline text-center py-2">
+  <li class="list-inline-item">
+    <a href="#!" class="btn btn-primary btn-rounded ejemplo2">Registrarse</a>
+  </li>
+  <li class="list-inline-item ">
+    <a href="#!" class="btn btn-danger btn-rounded ejemplo3 ">Iniciar Sesion</a>
+  </li>
+</ul>
+<hr>
+{{/if}}
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">
+    <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/tinydesignsS">
+      <i class="fab fa-facebook-f fa-3x"></i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-tw mx-1">
+      <i class="fab fa-twitter fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-li mx-1">
+      <i class="fab fa-linkedin-in fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-dribbble mx-1">
+      <i class="fab fa-instagram-square fa-3x"></i>
+    </a>
+  </li>
+</ul>
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a href="#"> by SupporT</a>
+
+</div>
+</footer>
+</html>
+

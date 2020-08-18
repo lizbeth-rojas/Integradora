@@ -37,13 +37,56 @@
                     <li><a href="/globos">Globos</a></li>
                   </ul>
                 </li>
-                <button class="btn btn-outline-info my-2 my-sm-0" style="margin-left:30px;" type="submit">Iniciar Sesión</button>
+                {{#if logueado}}
+                <button type="button" class="btn btn-outline-info my-2 my-sm-0 disable letras" style="margin-left: 5px;">
+                    {{ name }}
+                </button>
+                <button type="button" class="btn btn-outline-danger my-2 my-sm-0 letras" style="margin-left: 5px;">
+                    <a href="/cerrar" style="text-decoration: none">Cerrar sesion</a>
+                </button>
+                
+                {{else}}
+                <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
+                {{/if}}
               </ul>
             </nav>
           </div>
         </div>
       </div>
     </header>
+    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <form method="POST" action="/login">
+                          
+                          <div class="modal-body">
+                              <img class="img" src="imagenes/avatarx2.png" alt="">
+                              <h2 class="letras">Iniciar sesion</h2>
+                              <div class="form-group row">
+                                  <input class="form-control form-control-lg formularios" name="correo" type="email" placeholder="Correo">
+                              </div>
+                              <div class="form-group row">
+                                  <input class="form-control form-control-lg formularios" name="pass" type="password" placeholder="Contraseña">
+                              </div>
+
+                          </div>
+                          <div class="modal-footer">
+                              <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                          </div>
+                      </form>
+                      {{#if message }}
+                          <h4 class="alert alert-danger mt-3" style="text-align: center;">{{message}}</h4>
+                      {{/if}}
+                  </div>
+              </div>
+          </div>
+      </div>
 
     
 
