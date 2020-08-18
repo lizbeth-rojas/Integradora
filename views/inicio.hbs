@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" width="28" height="28"></script>
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <title>Mi vista</title>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 200;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .title {
+                font-size: 84px;
+            }
+
+            .m-b-md {
+                margin-bottom: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="imagenes/nav-tiny.jpeg" width="370px;" height="81px;" alt="" loading="lazy" style="margin: -13px; margin-left: -16px;">
+            </a>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 450px;">
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="nav-link letras" href="#">Eventos</a>
+                    <a class="nav-link letras" href="#">Artículos</a>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-info dropdown-toggle letras" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 10px;">Todos <link rel="shortcut icon" type="image/x-icon" href="/Iconos/chevron-down.svg" />
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item letras" href="#">Camisas</a>
+                            <a class="dropdown-item letras" href="#">Termos</a>
+                            <a class="dropdown-item letras" href="#">Invitaciones</a>
+                            <a class="dropdown-item letras" href="#">Globos</a>
+                        </div>
+                    </div>
+                    {{#if logueado}}
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0 disable letras" style="margin-left: 5px;">
+                        {{ name }}
+                    </button>
+                    <button type="button" class="btn btn-outline-danger my-2 my-sm-0 letras" style="margin-left: 5px;">
+                        <a href="/auth/cerrar" style="text-decoration: none">Cerrar sesion</a>
+                    </button>
+                    
+                    {{else}}
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
+                    
+                
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" style="margin-left: 5px;">
+                        <a href="/crear-cuenta" style="text-decoration: none">Crear cuenta</a>
+                    </button>
+                    {{/if}}
+
+                </form>
+            </div>
+
+            <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" action="/auth/login">
+                                
+                                <div class="modal-body">
+                                    <img class="img" src="imagenes/avatarx2.png" alt="">
+                                    <h2 class="letras">Iniciar sesion</h2>
+                                    <div class="form-group row">
+                                        <input class="form-control form-control-lg formularios" name="correo" type="email" placeholder="Correo">
+                                    </div>
+                                    <div class="form-group row">
+                                        <input class="form-control form-control-lg formularios" name="pass" type="password" placeholder="Contraseña">
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                                </div>
+                            </form>
+                            {{#if message }}
+                                <h4 class="alert alert-danger mt-3" style="text-align: center;">{{message}}</h4>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <button type="button" id="" class="btn btn-outline-danger my-2 my-sm-0 letras" style="margin-left: 5px;">
+            Imprimir
+        </button>
+        <div class="flex-center position-ref full-height">
+            <div class="content">
+                <div class="title m-b-md">
+                    JCarlos-Saucedo!
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
