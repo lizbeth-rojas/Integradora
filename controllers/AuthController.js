@@ -41,7 +41,7 @@ exports.Register = (req, res) => {
 		throw err
 		}
 	if(pure === correo ) {
-		return res.render('registro', {
+		return res.render('registro.hbs', {
 			message: 'El correo ingresado ya existe'
 		});
 	}
@@ -90,7 +90,7 @@ exports.Login = (req, res) => {
 						console.log("esta logueado? " + req.session.loggedin)
 						res.redirect('/');
 					} else {
-						return res.render('/inicio', {
+						return res.render('/', {
 							message: 'Correo o contraseña incorrecto'
 						});
 						res.end();
@@ -102,7 +102,7 @@ exports.Login = (req, res) => {
 		}
 		fetchData()
 	} else {
-		return res.render('/inicio', {
+		return res.render('/', {
 			message: 'Porfavor ingrese un correo y una contraseña'
 		});
 		res.end();

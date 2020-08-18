@@ -13,8 +13,9 @@ class Invoice {
         your: 'data'
       }
 
-      const templatePath = Path.resolve(process.cwd(), 'factura')
+      const templatePath = Path.resolve('views', 'factura.hbs')
       const content = await ReadFile(templatePath, 'utf8')
+      //console.log(templatePath);
 
       // compile and render the template with handlebars
       const template = Handlebars.compile(content)

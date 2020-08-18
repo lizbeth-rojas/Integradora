@@ -49,7 +49,7 @@ app.use(session({
 	saveUninitialized: true
 }));
 
-app.use('/', require('./routes/paginas.js'));
+//app.use('/', require('./routes/paginas.js'));
 app.use('/auth', require('./routes/auth'));
 
 

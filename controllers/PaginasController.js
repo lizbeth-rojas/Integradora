@@ -9,13 +9,13 @@ const CrearCuenta = (req, res) => {
 	if (req.session.loggedin === true) { 
 		res.redirect('/');
 	} else {
-		res.render ('registro')
+		res.render ('registro.hbs')
 	} 
 	
 }
 
 const Factura = (req, res) => {
-	res.render ('factura')
+	res.render ('factura.hbs')
 }
 
 module.exports = {

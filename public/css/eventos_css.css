@@ -1,0 +1,63 @@
+.fondo1{
+	background-image: url("../img/fondo_eventos.jpeg");
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+.fondoinfantiles{
+	background-color: #F28773;
+}
+div:p{
+	font-family: "Arial Rounded MT Bold", sans-serif;
+}
+
+.csscarousel{
+	margin-left: 130px;
+}
+.divprin{
+	background-size: 500px;
+	background-color: black;
+}
+
+.divcontcards{
+	
+	opacity: 95%;
+
+}
+.divcards{
+	margin-top: 50px;
+}
+.sep{
+	width: 150px;
+	height: 10px;
+	
+	
+}
+.sep2{
+	width: 20px;
+	height: 30px;
+}
+.sep3{
+	width: 340px;
+	height: 30px;
+}
+
+.divinfo{
+	background-color: black;
+}
+
+.imag-muestra{
+	float: right;
+	margin-left: 20px;
+}
+
+.boton-muestra{
+	float: right;
+}
+.muestra{
+	height: 250px;
+}
+.piepag{
+	margin-left: 80px;
+	float: left;
+
+}
