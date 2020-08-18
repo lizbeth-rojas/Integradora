@@ -10,12 +10,14 @@ var app = express();
 var rutas = require("./routes/index");
 
 
+var port = 8080;
+app.listen(port);
 //SESSION
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //settings
-app.set('port', process.env.PORT || 8080);
+//app.set('port', process.env.PORT || 8080);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', consolidate.handlebars)
 app.set('view engine', 'ejs');
@@ -70,9 +72,10 @@ app.use(rutas);
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Start the Server
-app.listen(app.get('port'), () =>{
-	console.log("Server on Port: " + app.get('port'))
-});
+//app.listen(app.get('port'), () =>{
+//	console.log("Server on Port: " + app.get('port'))
+//});
+
 
 
 
