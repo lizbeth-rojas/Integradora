@@ -7,25 +7,25 @@ const Eventos = (req, res) => {
 }
 
 const Bodas = (req, res) => {
-    res.render('evbodas.ejs', {
+    res.render('evbodas.hbs', {
         title: 'TinyDesigns - Bodas'
     })
 }
 
 const Graduaciones = (req, res) => {
-    res.render('evgraduaciones.ejs', {
+    res.render('evgraduaciones.hbs', {
         title: 'TinyDesigns - Graduaciones'
     })
 }
 
 const Infantiles = (req, res) => {
-    res.render('evinfantiles.ejs', {
+    res.render('evinfantiles.hbs', {
         title: 'TinyDesigns - Infantiles'
     })
 }
 
 const XV = (req, res) => {
-    res.render('evXV.ejs', {
+    res.render('evXV.hbs', {
         title: 'TinyDesigns - XV´s'
     })
 }
