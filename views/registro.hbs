@@ -6,23 +6,57 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" width="28" height="28"></script>
         <link rel="stylesheet" href="/css/estilo.css">
+        <link href="css/inicio1.css" rel="stylesheet">
         <title>Crear cuenta</title>
     </head>
     <body class="fondo">
-        <nav class="navbar navbar-expand navbar-light bg-light">
+        <nav class="navbar navbar-expand blak">
             <a class="navbar-brand" href="/">
-                <img src="imagenes/nav-tiny.jpeg" width="370px;" height="81px;" alt="" loading="lazy" style="margin: -13px; margin-left: -16px;">
+                <img src="imagenes/nav-tinyy.png" width="370px;" height="81px;" alt="" loading="lazy" style="margin: -13px; margin-left: -16px;">
             </a>
           
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 650px;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 620px;">
                 <form class="form-inline my-2 my-lg-0">
-                    <a class="nav-link" href="#" style="font-family: Alesandra;">Eventos</a>
-                    <a class="nav-link" href="#" style="font-family: Alesandra;">Artículos</a>
+                    <a class="nav-link rosadas" href="/eventos" >Eventos</a>
+                    <a class="nav-link rosadas" href="/articulos" >Artículos</a>
                     
-                    <button class="btn btn-outline-info my-2 my-sm-0"style="font-family: Alesandra;">Iniciar Sesión</button>
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" >Iniciar Sesión</button>
                 </form>
             </div>
         </nav>
+        <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" name="inicio" action="/login">
+                                
+                                <div class="modal-body">
+                                    <img class="img" src="imagenes/avatarx2.png" alt="">
+                                    <h2 class="letras">Iniciar sesion</h2>
+                                    <div class="form-group row">
+                                        <input class="form-control form-control-lg formularios" name="correo" type="email" placeholder="Correo">
+                                    </div>
+                                    <div class="form-group row">
+                                        <input class="form-control form-control-lg formularios" name="pass" type="password" placeholder="Contraseña">
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                                </div>
+                            </form>
+                            {{#if message }}
+                                <h4 class="alert alert-danger mt-3" style="text-align: center;">{{message}}</h4>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         <div class="post" style="position: absolute;">
             <p class="texto" >¡Organiza y personaliza tus eventos al momento!</p>
         </div>

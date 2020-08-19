@@ -8,6 +8,8 @@ const Auth = require('../controllers/AuthController');
 //console.log('dsgfiuagf');
 router.get('/', InicioController.Inicio);
 
+router.get('/crear-cuenta', InicioController.CrearCuenta);
+
 router.get('/eventos', EventController.Eventos);
 
 router.get('/bodas', EventController.Bodas);
