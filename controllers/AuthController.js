@@ -32,10 +32,10 @@ exports.Register = (req, res) => {
 		conn = await pool.getConnection();
 		console.log(correo)
 		var pure = "";
-		const res = await conn.query("SELECT correo_electronico FROM clientes WHERE correo_electronico = ?", [correo]);
+		const res = await conn.query("SELECT contacto_alt FROM clientes WHERE contacto_alt = ?", [correo]);
 		res.forEach((res) => {
-			pure = res.correo_electronico;
-			console.log(res.correo_electronico); 
+			pure = res.contacto_alt;
+			console.log(res.contacto_alt); 
 		})
 	} catch (err) {
 		throw err
@@ -54,7 +54,7 @@ exports.Register = (req, res) => {
 			let conn;
 		  	try {
 				conn = await pool.getConnection();
-				const consulta = await conn.query("INSERT INTO clientes (nombre, correo_electronico, telefono, direccion, contraseña) VALUES ?", [valores]);
+				const consulta = await conn.query("INSERT INTO clientes (nombre, contacto_alt, telefono, direccion, password) VALUES ?", [valores]);
 				req.session.loggedin = true;
 				req.session.correo = correo;
 				console.log("esta logueado? " + req.session.loggedin)
@@ -79,10 +79,10 @@ exports.Login = (req, res) => {
 			let conn;
 		  	try {
 				conn = await pool.getConnection();
-				const consulta = await conn.query("SELECT * FROM clientes WHERE correo_electronico = ?", [correo]);
+				const consulta = await conn.query("SELECT * FROM clientes WHERE contacto_alt = ?", [correo]);
 				consulta.forEach((consulta) => {
-					respu = consulta.correo_electronico;
-					console.log("cuenta " + consulta.correo_electronico); 
+					respu = consulta.contacto_alt;
+					console.log("cuenta " + consulta.contacto_alt); 
 				})
 				var respu;
 					if (respu === correo) {
