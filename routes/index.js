@@ -5,6 +5,7 @@ const ArticulosController = require('../controllers/ArticulosController');
 const InicioController = require('../controllers/InicioController');
 const EventController = require('../controllers/EventController');
 const Auth = require('../controllers/AuthController');
+const PersonalizaController = require('../controllers/PersonalizaController');
 //console.log('dsgfiuagf');
 router.get('/', InicioController.Inicio);
 
@@ -33,5 +34,9 @@ router.get('/globos', ArticulosController.Globos);
 router.post ('/register', Auth.Register);
 router.post ('/login', Auth.Login);
 router.get('/cerrar', Auth.Logout);
+
+router.get('/personalizaarticulos', PersonalizaController.Pers_Articulos);
+router.get('/personalizaeventos', PersonalizaController.Pers_Eventos);
+
 
 module.exports = router;

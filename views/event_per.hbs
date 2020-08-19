@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="BOOTSTRAP/bootstrap-4.1.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="event_per.css">
+    <style type="text/css">@font-face{font-family: titulo; src:url(Alesandra.ttf);} </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--recursos para los iconos-->
+    <link href="fontawesome-free-5.14.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.14.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-5.14.0-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--bootsrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--otros iconos-->
+    <link href="icofont/icofont.min.css" rel="stylesheet">
+    <!--Archivo CSS-->
+    <link href="css/nav.css" rel="stylesheet">
+     
+  <title>{{title}}</title>
+</head>
+<body>
+	<header id="header" class="fixed-top header-transparent">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-11 d-flex align-items-center">
+            <a href="/" class="mr-auto"><img src="images/nav-tinyy.png" style="float:left; margin-left:-40px;"></a>
+            <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                <li class="active"><a href="/">inicio</a></li>
+                <li><a href="/eventos">Eventos</a></li>
+                <li class="drop-down"><a href="/articulos">Articulos</a>
+                  <ul>
+                    <li><a href="/camisas">Camisas</a></li>
+                    <li><a href="/termos">Termos</a></li>
+                    <li><a href="/invitaciones">Invitaciones</a></li>
+                    <li><a href="/globos">Globos</a></li>
+                  </ul>
+                </li>
+                {{#if logueado}}
+                <li class="drop-down"><a href="">{{ name }}</a>
+                  <ul>
+                    <li><a href="/cerrar">Cerrar sesion</a></li>
+                  </ul>
+                </li>
+                {{else}}
+                <hr>
+                {{/if}}
+                <!--<button class="btn btn-outline-info my-2 my-sm-0" style="margin-left:30px;" type="submit">Iniciar Sesión</button>-->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Archivos .js-->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--Personalizacion eventos-->
+	<div class="parte1" style="background-image: url(collage2.jpg);"></div>
+	<h1 style="font-family: titulo; text-align: center; margin-top: 15px;">Termos</h1>
+    <div class="card-deck" style="margin-top: 30px;"> 
+  <div class="card">
+    <img src="images/art1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vaso Skinny</h5>
+      <p class="card-text">Vaso termico skinny de 20oz.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro Mate</option>
+    <option value="3">Plata</option>
+    <option value="4">Magenta</option>
+    <option value="5">Celeste</option>
+    <option value="6">Lila</option>
+    <option value="7">Menta</option>
+  </select>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/art4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Cilindro </h5>
+      <p class="card-text">Cilindro 500ml.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Transparente</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rosa</option>
+    <option value="5">Azul</option>
+    <option value="6">Morado</option>
+    <option value="7">Verde</option>
+    <option value="8">Amarillo</option>
+  </select>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/art5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Vaso cafetero</h5>
+      <p class="card-text">Vaso cafetero de 16oz.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rose Gold</option>
+    <option value="5">Azul</option>
+    <option value="6">Ivory</option>
+    <option value="7">Morado</option>
+    <option value="8">Plateado</option>
+  </select>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/tazas2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Taza </h5>
+      <p class="card-text">Taza para sublimar 11oz.</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rosa</option>
+    <option value="5">Azul Marino</option>
+    <option value="6">Morado</option>
+    <option value="7">Verde</option>
+    <option value="8">Celeste</option>
+  </select>
+</div>
+    </div>
+  </div>
+</div>
+    <h1 style="font-family: titulo; text-align: center; margin-top: 15px;">Camisas</h1>
+    <div class="card-deck" style="margin-top: 30px;"> 
+  <div class="card">
+    <img src="images/camisas1.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Playera Bob Esponja</h5>
+      <p class="card-text">Playera Bob Esponja y Patricio, </p>
+      <p class="card-text"><small class="text-muted"></small></p>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Chica</option>
+    <option value="2">Mediana</option>
+    <option value="3">Grande</option>
+    <option value="4">Extra Grande</option>
+    <option value="5">Extra Extra Grande</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Genero</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Dama</option>
+    <option value="2">Caballero</option>
+     <option value="3">Ambos</option>
+  </select>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/camisas2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Familia Mouse </h5>
+      <p class="card-text">Playeras Mickey y Minnie Mouse para toda la familia</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+               <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rosa</option>
+    <option value="5">Azul Marino</option>
+    <option value="6">Morado</option>
+    <option value="7">Verde</option>
+    <option value="8">Celeste</option>
+  </select>
+</div>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Ch</option>
+    <option value="2">M</option>
+    <option value="3">G</option>
+    <option value="4">EG</option>
+    <option value="5">EEG</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Genero</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Dama</option>
+    <option value="2">Caballero</option>
+    <option value="3">Ambos</option>
+  </select>
+</div>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla Niños</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Ch</option>
+    <option value="2">M</option>
+    <option value="3">G</option>
+    <option value="4">EG</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla Bebés</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/camisas3.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Playera King y Queen</h5>
+      <p class="card-text">Playera King y Queen</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+                   <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rosa</option>
+    <option value="5">Azul Marino</option>
+    <option value="6">Morado</option>
+    <option value="7">Verde</option>
+    <option value="8">Celeste</option>
+  </select>
+</div>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Ch</option>
+    <option value="2">M</option>
+    <option value="3">G</option>
+    <option value="4">EG</option>
+    <option value="5">EEG</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Genero</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Dama</option>
+    <option value="2">Caballero</option>
+     <option value="3">Ambos</option>
+  </select>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/camisas5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Los Simpsons</h5>
+      <p class="card-text">Playeras familia Simpsons</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+                         <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Color</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Blanco</option>
+    <option value="2">Negro</option>
+    <option value="3">Naranja</option>
+    <option value="4">Rosa</option>
+    <option value="5">Azul Marino</option>
+    <option value="6">Morado</option>
+    <option value="7">Verde</option>
+    <option value="8">Celeste</option>
+  </select>
+</div>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Ch</option>
+    <option value="2">M</option>
+    <option value="3">G</option>
+    <option value="4">EG</option>
+    <option value="5">EEG</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Genero</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Dama</option>
+    <option value="2">Caballero</option>
+     <option value="3">Ambos</option>
+  </select>
+</div>
+           <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla Niños</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">Ch</option>
+    <option value="2">M</option>
+    <option value="3">G</option>
+    <option value="4">EG</option>
+  </select>
+</div>
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <label class="input-group-text" for="inputGroupSelect01" style="background-color: #AED6F1 ">Talla Bebés</label>
+  </div>
+  <select class="custom-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+  </select>
+</div>
+    </div>
+  </div>
+</div>
+    <h1 style="font-family: titulo; text-align: center; margin-top: 15px;">Invitaciones</h1>
+    <div class="card-deck" style="margin-top: 30px;"> 
+  <div class="card">
+    <img src="images/invitaciones_bodas3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Invitaciones Boda</h5>
+      <p class="card-text">Invitaciones diseñadas para ese día especial en el cual estas por comenzar esa nueva etapa en tu vida </p>
+      <p class="card-text"><small class="text-muted"></small></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/invitaciones_graduated2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Invitacion Graduación </h5>
+      <p class="card-text">Invitaciones diseñadas para ese día especial en el cual terminas una etapa muy importante en tu vida</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/invitaciones_infantil.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Invitacion Infantil</h5>
+      <p class="card-text">Invitaciones diseñadas para festejar a los mas pequeños del hogar</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/invitaciones_XV.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Invitacion XV</h5>
+      <p class="card-text">Invitaciones diseñadas para la celebración mas esperada por toda señorita</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <h1 style="font-family: titulo; text-align: center; margin-top: 15px; margin-bottom: 50px;">Globos</h1>
+    <div class="card-deck" style="margin-top: 30px;"> 
+  <div class="card">
+    <img src="images/art12.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Bouquet de Globos</h5>
+      <p class="card-text">Bouquet de Globos con pintura en el cual tu eliges el mensaje y los colores</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+   		      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  <div class="card">
+    <img src="images/art13.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Globo Gigante </h5>
+      <p class="card-text">Globo gigante con pintura tu eliges el mensaje y los colores</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+   
+  </div>
+</div>
+  <div class="card">
+    <img src="images/art14.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Bouquet de Globos</h5>
+      <p class="card-text">Bouquet de Globos metalicos y de latex, para todo evento de tu vida, tu eliges los colores</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/art11.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Arco de Globos</h5>
+      <p class="card-text">Arco de Globos organico tu eliges los colores</p>
+      <p class="card-text"><small class="text-muted"></small></p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" id="recipient-name">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+</body>
+<!--Archivos .js-->
+<script src="navbar/jquery/jquery.min.js"></script>
+<script src="navbar/js/main.js"></script>
+</body>
+<footer class="page-footer font-small stylish-color-dark pt-4" id="foot">
+<div class="container text-center text-md-left">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
+      <p>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</p>
+      <p><i class="fas fa-envelope-open"></i>   tinydesigns07@gmail.com</p>
+      <p><i class="fab fa-whatsapp-square"></i>(871)596-1588</p>
+      <a href="https://www.facebook.com/tinydesignsS"><p><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</p></a>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-5 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Diseño para eventos sociales</h6>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/graduaciones">Graduaciones</a>
+        </li>
+        <li>
+          <a href="/infantiles">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="bodas">Bodas</a>
+        </li>
+        <li>
+          <a href="/xv">Fiestas de XV</a>
+        </li>
+      </ul>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Venta de articulos</h6>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/invitaciones">Invitaciones</a>
+        </li>
+        <li>
+          <a href="/globos">Globos</a>
+        </li>
+        <li>
+          <a href="/termos">Termos</a>
+        </li>
+        <li>
+          <a href="/camisas">Camisas</a>
+        </li>
+      </ul>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-2 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Acerca de nosotros</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/">¿Quiénes somos?</a>
+        </li>
+        <li>
+          Aviso de privacidad
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{{#if logueado}}
+<hr>
+{{/if}}             
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">
+    <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/tinydesignsS">
+      <i class="fab fa-facebook-f fa-3x"></i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-tw mx-1">
+      <i class="fab fa-twitter fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-li mx-1">
+      <i class="fab fa-linkedin-in fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-dribbble mx-1">
+      <i class="fab fa-instagram-square fa-3x"></i>
+    </a>
+  </li>
+</ul>
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a href="#"> by SupporT</a>
+</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+</body>
+</html>
