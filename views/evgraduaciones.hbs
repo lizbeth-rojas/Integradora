@@ -78,6 +78,7 @@
                           </div>
                           <div class="modal-footer">
                               <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                              <a href="/crear-cuenta" style="margin-right: 150px;">Aun no tengo una cuenta</a>
                           </div>
                       </form>
                       {{#if message }}
@@ -106,7 +107,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">40</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos"><button class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</button></a>
+      {{else}}
+      <a href="/personalizaeventos" data-toggle="modal" data-target="#ModalCenter" type="button"><button class="btn btn-outline-light btn-success boton-muestra"  style="float:right;">Comprar</button></a>
+      {{/if}}
       
     </div>
     <!--SEPARACION-->
@@ -122,7 +127,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">100</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</a>
+      {{else}}
+      <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" data-toggle="modal" data-target="#ModalCenter" type="button" style="float:right;">Comprar</a>
+      {{/if}}
       
     </div>
 
@@ -138,7 +147,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">300</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</a>
+      {{else}}
+      <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" data-toggle="modal" data-target="#ModalCenter" type="button" style="float:right;">Comprar</a>
+      {{/if}}
       
     </div>
 
@@ -154,7 +167,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">120</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</a>
+      {{else}}
+      <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" data-toggle="modal" data-target="#ModalCenter" type="button" style="float:right;">Comprar</a>
+      {{/if}}
       
     </div>
 
@@ -169,7 +186,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">100</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</a>
+      {{else}}
+      <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" data-toggle="modal" data-target="#ModalCenter" type="button" style="float:right;">Comprar</a>
+      {{/if}}
       
     </div>
 
@@ -185,7 +206,11 @@
       <div style="float:left; margin-right:10px;"><img src="img/icons/personas-icon.png" style="margin-right:5px;">45</div>
       <div style="float:left; margin-right:10px;"><img src="img/icons/hogar-icon.png" style="margin-right:5px;">Si</div>
 
+      {{#if logueado}}
       <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" style="float:right;">Comprar</a>
+      {{else}}
+      <a href="/personalizaeventos" class="btn btn-outline-light btn-success boton-muestra" data-toggle="modal" data-target="#ModalCenter" type="button" style="float:right;">Comprar</a>
+      {{/if}}
       
     </div>
     <br>
@@ -258,10 +283,10 @@
 <hr>
 <ul class="list-unstyled list-inline text-center py-2">
   <li class="list-inline-item">
-    <a href="#!" class="btn btn-primary btn-rounded ejemplo2">Registrarse</a>
+    <a href="/crear-cuenta" class="btn btn-primary btn-rounded ejemplo2">Registrarse</a>
   </li>
   <li class="list-inline-item ">
-    <a href="#!" class="btn btn-danger btn-rounded ejemplo3 ">Iniciar Sesion</a>
+    <a href="" class="btn btn-danger btn-rounded ejemplo3 " data-toggle="modal" data-target="#ModalCenter">Iniciar Sesion</a>
   </li>
 </ul>
 <hr>

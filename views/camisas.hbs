@@ -78,6 +78,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                                <a href="/crear-cuenta" style="margin-right: 150px;">Aun no tengo una cuenta</a>
                             </div>
                         </form>
                         {{#if message }}
@@ -98,7 +99,12 @@
               Personaliza tu pedido con nosotros.
             </p>
             <strong>Juvenil - Infantil</strong>
+            
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
         </div>
         </div>
         <div class="card" id="medio">
@@ -107,7 +113,11 @@
             <h5 class="card-title">Queen and King</h5>
             <p class="card-text">¡Con nuestro diseño puedes compartir tu outfit favorito con tu pareja! Vamos, no esperes más.</p>
             <strong>Juvenil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -116,7 +126,11 @@
             <h5 class="card-title">Goku</h5>
             <p class="card-text">Ahora te presentamos nuestro nuevo diseño de tu personaje favorito de Dragon Ball Z. </p>
             <strong>Juvenil - Infantil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -127,7 +141,11 @@
             <h5 class="card-title">Mouse</h5>
             <p class="card-text">También contamos con hermosos diseños para lucirlos en familia, puedes personalizarlo a tu gusto.</p>
             <strong>Familiar</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -138,7 +156,11 @@
               Diseño para commpartir con la familia.
             </p>
             <strong>Familiar</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -147,7 +169,11 @@
             <h5 class="card-title">Música</h5>
             <p class="card-text">Contamos con diseños para los jovenes. En la actualidad la música los mueve, no te quedes sin la tuya.</p>
             <strong>Juvenil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -158,7 +184,11 @@
             <h5 class="card-title">Dragon Ball Z - Goku</h5>
             <p class="card-text">¿Porque quedarte sin nuestro nuevo diseño? Ven y personaliza tu camisa favorita.</p>
             <strong>Juvenil - Infantil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -167,7 +197,11 @@
             <h5 class="card-title">Dragon Ball Z - Gohan</h5>
             <p class="card-text">Contamos con diseños para tus pequeños y los jovenes.</p>
             <strong>Juvenil - Infantil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -176,7 +210,11 @@
             <h5 class="card-title">Dragon Ball Z - Vegeta & Goku</h5>
             <p class="card-text">¿Te quedarás sin la tuya?</p>
             <strong>Juvenil - Infantil</strong>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div><br>

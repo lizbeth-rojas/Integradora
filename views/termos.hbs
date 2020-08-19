@@ -78,6 +78,7 @@
                       </div>
                       <div class="modal-footer">
                           <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                          <a href="/crear-cuenta" style="margin-right: 150px;">Aun no tengo una cuenta</a>
                       </div>
                   </form>
                   {{#if message }}
@@ -96,7 +97,11 @@
             <h5 class="card-title">Medicina</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
         </div>
         </div>
         <div class="card" id="medio">
@@ -105,7 +110,11 @@
             <h5 class="card-title">Star Wars</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -114,7 +123,11 @@
             <h5 class="card-title">Dragon Ball Z</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -125,7 +138,11 @@
             <h5 class="card-title">Brillos</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -134,7 +151,11 @@
             <h5 class="card-title">Friends</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -143,7 +164,11 @@
             <h5 class="card-title">Sports</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -154,7 +179,11 @@
             <h5 class="card-title">Anime</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -163,7 +192,11 @@
             <h5 class="card-title">Marvel</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -172,7 +205,11 @@
             <h5 class="card-title">Mandalas</h5>
             <p class="card-text">¿Quieres proporcionar un presente inolvidable? Personaliza con nosotros.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div><br>

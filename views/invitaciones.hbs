@@ -78,6 +78,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
+                            <a href="/crear-cuenta" style="margin-right: 150px;">Aun no tengo una cuenta</a>
                         </div>
                     </form>
                     {{#if message }}
@@ -96,7 +97,11 @@
             <h5 class="card-title">Infantil - Unicornio</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
         </div>
         </div>
         <div class="card" id="medio">
@@ -105,7 +110,11 @@
             <h5 class="card-title">Infantil - Sirena</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -114,7 +123,11 @@
             <h5 class="card-title">Mouse</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -125,7 +138,11 @@
             <h5 class="card-title">Graduation - Formal</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -134,7 +151,11 @@
             <h5 class="card-title">Graduation - Ceremony</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -143,7 +164,11 @@
             <h5 class="card-title">Graduation Package</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -154,7 +179,11 @@
             <h5 class="card-title">XV</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -163,7 +192,11 @@
             <h5 class="card-title">Passport - París</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -172,7 +205,11 @@
             <h5 class="card-title">Party</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
 
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -182,7 +219,11 @@
           <div class="card-body">
             <h5 class="card-title">Wedding</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card" id="medio">
@@ -190,7 +231,11 @@
           <div class="card-body">
             <h5 class="card-title">Wedding Two</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
         <div class="card">
@@ -198,7 +243,11 @@
           <div class="card-body">
             <h5 class="card-title">Wedding Three</h5>
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
+            {{else}}
+            <a href="/personalizaarticulos" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
+            {{/if}}
           </div>
         </div>
       </div><br><br>

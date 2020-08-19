@@ -207,7 +207,12 @@
             <p class="card-text cold-md-5" style="color:black;" align="center">
               Sólo basta un motivo para hacer una gran celebración, dale a tu evento un toque personal y llamativo, disfruta todo lo que Tiny Desings puede ofrece a la puerta de tu casa.
             </p>
-            <a href="#" class="btn btn-success col-md-12">More..</a>
+            
+            {{#if logueado}}
+            <a href="/personalizaeventos" class="btn btn-success col-md-12">More..</a>
+            {{else}}
+            <a href="/personalizaeventos" class="btn btn-success col-md-12" data-toggle="modal" data-target="#ModalCenter" type="button" type="button">More..</a>
+            {{/if}}
           </div>
         </div>
       </div>
