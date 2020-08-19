@@ -1,0 +1,21 @@
+body{
+    background-image: url("../IMGProyecto/plumas.jpg");
+    background-size: 1349px;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+img[alt=plumas]{ width: 1349px; }
+
+div[id=opciones]{ margin-left: 133.5px; }
+
+img[alt=Inicio]{ width: 1349px; }
+
+div[class=card-group]{ margin: 20px; }
+
+div[id=medio]{ margin-left: 50%; padding-left: 5px; margin-right: 5px; }
+
+@font-face{font-family: Alesandra; src: url(Alesandra.ttf);}
+
+h5[class=card-title]{ font-family: Alesandra; }
+
+a[id=comprar]{ font-family: Alesandra; }
