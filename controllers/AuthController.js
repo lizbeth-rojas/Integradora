@@ -13,7 +13,7 @@ let fetchData = async () => {
   let conn;
   try {
 	conn = await pool.getConnection();
-	console.log('Conexion a BD establecida 2...');
+	//console.log('Conexion a BD establecida 2...');
   } catch (err) {
 	throw err
 	}
@@ -70,6 +70,7 @@ exports.Register = (req, res) => {
 }
 
 exports.Login = (req, res) => {
+	console.log(req.body)
 
 	const { correo, pass } = req.body;
 
@@ -81,7 +82,7 @@ exports.Login = (req, res) => {
 				const consulta = await conn.query("SELECT * FROM clientes WHERE correo_electronico = ?", [correo]);
 				consulta.forEach((consulta) => {
 					respu = consulta.correo_electronico;
-					console.log("esta es " + consulta.correo_electronico); 
+					console.log("cuenta " + consulta.correo_electronico); 
 				})
 				var respu;
 					if (respu === correo) {
@@ -90,7 +91,7 @@ exports.Login = (req, res) => {
 						console.log("esta logueado? " + req.session.loggedin)
 						res.redirect('/');
 					} else {
-						return res.render('/', {
+						return res.render('iniciob.hbs', {
 							message: 'Correo o contraseña incorrecto'
 						});
 						res.end();
@@ -102,14 +103,14 @@ exports.Login = (req, res) => {
 		}
 		fetchData()
 	} else {
-		return res.render('/', {
+		return res.render('iniciob.hbs', {
 			message: 'Porfavor ingrese un correo y una contraseña'
 		});
 		res.end();
 	}
 };
 
-exports.Longout = (req, res) => {
+exports.Logout = (req, res) => {
 	req.session.loggedin = false;
 	res.redirect('/');
 	}

@@ -1,9 +1,9 @@
 //inicio controller
 const Inicio = (req,res) =>{
-  res.render('inicio.ejs', {
+  res.render('iniciob.hbs', {
     title: 'TinyDesigns - Inicio',
     name: req.session.correo,
-		logueado: req.session.loggedin 
+	logueado: req.session.loggedin 
   })
 }
 

@@ -4,6 +4,7 @@ var router = express.Router();
 const ArticulosController = require('../controllers/ArticulosController');
 const InicioController = require('../controllers/InicioController');
 const EventController = require('../controllers/EventController');
+const Auth = require('../controllers/AuthController');
 //console.log('dsgfiuagf');
 router.get('/', InicioController.Inicio);
 
@@ -26,5 +27,9 @@ router.get('/termos', ArticulosController.Termos);
 router.get('/invitaciones', ArticulosController.Invitaciones);
 
 router.get('/globos', ArticulosController.Globos);
+
+router.post ('/register', Auth.Register);
+router.post ('/login', Auth.Login);
+router.get('/cerrar', Auth.Logout);
 
 module.exports = router;

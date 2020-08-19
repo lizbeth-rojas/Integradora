@@ -52,14 +52,14 @@ app.use(session({
 }));
 
 //app.use('/', require('./routes/paginas.js'));
-app.use('/auth', require('./routes/auth'));
+//app.use('/auth', require('./routes/auth'));
 
 
 
 
 //middleware
 app.use((req, res, next) => {
-	console.log('$(req.url) -$(req.method)'); 
+	//console.log('$(req.url) -$(req.method)'); 
 	next();
 });
 app.use(bodyParser.json());
