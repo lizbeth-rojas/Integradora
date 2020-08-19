@@ -1,6 +1,6 @@
 //ARTICULOS
 const Articulos = (req, res) => {
-    res.render('articulos.ejs', {
+    res.render('articulos.hbs', {
         title: 'TinyDesigns - Artículos',
         name: req.session.correo,
         logueado: req.session.loggedin 
