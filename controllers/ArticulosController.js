@@ -8,25 +8,25 @@ const Articulos = (req, res) => {
 }
 
 const Camisas = (req, res, next) => {
-    res.render('camisas.ejs', {
+    res.render('camisas.hbs', {
         title: 'TinyDesigns - Camisas'
     })
 }
 
 const Termos = (req, res, next) => {
-    res.render('termos.ejs', {
+    res.render('termos.hbs', {
         title: 'TinyDesigns - Termos'
     })
 }
 
 const Invitaciones = (req, res, next) => {
-    res.render('invitaciones.ejs', {
+    res.render('invitaciones.hbs', {
         title: 'TinyDesigns - Invitaciones'
     })
 }
 
 const Globos = (req, res, next) => {
-    res.render('globos.ejs', {
+    res.render('globos.hbs', {
         title: 'TinyDesigns - Globos'
     })
 }
