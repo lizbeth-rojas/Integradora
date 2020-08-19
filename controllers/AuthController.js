@@ -13,7 +13,7 @@ let fetchData = async () => {
   let conn;
   try {
 	conn = await pool.getConnection();
-	//console.log('Conexion a BD establecida 2...');
+	console.log('Conexion a BD establecida 2...');
   } catch (err) {
 	throw err
 	}
