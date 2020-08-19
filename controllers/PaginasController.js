@@ -1,5 +1,5 @@
 const Inicio = (req, res) => {
-	res.render('inicio.ejs', {
+	res.render('inicio.hbs', {
 		name: req.session.correo,
 		logueado: req.session.loggedin 
 	})
