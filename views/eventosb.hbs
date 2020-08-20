@@ -152,7 +152,11 @@
             <p class="card-text cold-md-5" align="center">
             La vida es una fiesta sin fin. Te ofrecemos una gran variedad de opciones para que ese día sólo te preocupes por pasarla bien con tus seres amados.
             </p>
+            {{#if logueado}}
             <a href="/infantiles" class="btn btn-info col-md-12">More..</a>
+            {{else}}
+            <a href="" class="btn btn-info col-md-12" data-toggle="modal" data-target="#ModalCenter" type="button">More..</a>
+            {{/if}}
           </div>
         </div>
         <div class="sep"></div>
@@ -164,7 +168,11 @@
             <p class="card-text cold-md-5" style="color:black;" align="center">
               Conocemos el esfuerzo realizado para culminar tu preparación académica, por eso queremos darte la mejor celebración y ser parte de uno de los momentos de tu vida.
             </p>
+            {{#if logueado}}
             <a href="/graduaciones" class="btn btn-warning col-md-12">More..</a>
+            {{else}}
+            <a href="" class="btn btn-warning col-md-12" data-toggle="modal" data-target="#ModalCenter" type="button">More..</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -179,7 +187,11 @@
             <p class="card-text cold-md-5" style="color:black;" align="center">
               No dejes pasar la oportunidad de tener una boda como la has soñado, nuestra experiencia en bodas te da la garantía de que será el momento que durará toda tu vida.
             </p>
+            {{#if logueado}}
             <a href="/bodas" class="btn btn-danger col-md-12">More..</a>
+            {{else}}
+            <a href="" class="btn btn-danger col-md-12" data-toggle="modal" data-target="#ModalCenter" type="button">More..</a>
+            {{/if}}
           </div>
         </div>
         <div class="sep"></div>
@@ -191,7 +203,11 @@
             <p class="card-text cold-md-5"  align="center">
               El día más anhelado desde que eres pequeña ha llegado, sabemos que todo debe ser perfecto, y tenemos la experiencia en lograr que cada evento lo sea.
             </p>
+            {{#if logueado}}
             <a href="/XV" class="btn btn-light col-md-12">More..</a>
+            {{else}}
+            <a href="" class="btn btn-light col-md-12" data-toggle="modal" data-target="#ModalCenter" type="button">More..</a>
+            {{/if}}
           </div>
         </div>
       </div>
@@ -215,6 +231,7 @@
       <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
       <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Diseño para eventos sociales</h6>
       <ul class="list-unstyled">
+        {{#if logueado}}
         <li>
           <a href="/graduaciones">Graduaciones</a>
         </li>
@@ -227,9 +244,24 @@
         <li>
           <a href="/xv">Fiestas de XV</a>
         </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Graduaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Bodas</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas de XV</a>
+        </li>
+        {{/if}}
       </ul>
       <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Venta de articulos</h6>
       <ul class="list-unstyled">
+        {{#if logueado}}
         <li>
           <a href="/invitaciones">Invitaciones</a>
         </li>
@@ -242,6 +274,20 @@
         <li>
           <a href="/camisas">Camisas</a>
         </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Invitaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Globos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Termos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Camisas</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
     <hr class="clearfix w-100 d-md-none">

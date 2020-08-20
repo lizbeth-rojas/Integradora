@@ -365,6 +365,7 @@
       <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
       <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Diseño para eventos sociales</h6>
       <ul class="list-unstyled">
+        {{#if logueado}}
         <li>
           <a href="/graduaciones">Graduaciones</a>
         </li>
@@ -377,9 +378,24 @@
         <li>
           <a href="/xv">Fiestas de XV</a>
         </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Graduaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Bodas</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas de XV</a>
+        </li>
+        {{/if}}
       </ul>
       <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Venta de articulos</h6>
       <ul class="list-unstyled">
+        {{#if logueado}}
         <li>
           <a href="/invitaciones">Invitaciones</a>
         </li>
@@ -392,6 +408,20 @@
         <li>
           <a href="/camisas">Camisas</a>
         </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Invitaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Globos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Termos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Camisas</a>
+        </li>
+        {{/if}}
       </ul>
     </div>
     <hr class="clearfix w-100 d-md-none">
