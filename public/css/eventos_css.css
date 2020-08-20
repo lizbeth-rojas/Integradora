@@ -54,7 +54,8 @@ div:p{
 	float: right;
 }
 .muestra{
-	height: 250px;
+	height: auto;
+	min-height: 250px;
 }
 .piepag{
 	margin-left: 80px;
