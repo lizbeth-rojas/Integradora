@@ -44,7 +44,7 @@
                     <li><a href="/cerrar">Cerrar sesion</a></li>
                   </ul>
                 </li>
-                
+
                 {{else}}
                 <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
                 {{/if}}
@@ -64,7 +64,7 @@
                   </div>
                   <div class="modal-body">
                       <form method="POST" action="/login">
-                          
+
                           <div class="modal-body">
                               <img class="img" src="imagenes/avatarx2.png" alt="">
                               <h2 class="letras">Iniciar sesion</h2>
@@ -88,7 +88,7 @@
           </div>
       </div>
 
-    
+
 <br>
 <br>
 <br>
@@ -207,7 +207,7 @@
             <p class="card-text cold-md-5" style="color:black;" align="center">
               Sólo basta un motivo para hacer una gran celebración, dale a tu evento un toque personal y llamativo, disfruta todo lo que Tiny Desings puede ofrece a la puerta de tu casa.
             </p>
-            
+
             {{#if logueado}}
             <a href="/personalizaeventos" class="btn btn-success col-md-12">More..</a>
             {{else}}
@@ -219,8 +219,8 @@
 
       <div class="sep2"></div>
       	<!--Archivos .js-->
-<script src="navbar/jquery/jquery.min.js"></script>
-<script src="navbar/js/main.js"></script>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
 </body>
 <footer class="page-footer font-small stylish-color-dark pt-4" id="foot">
 <div class="container text-center text-md-left">
@@ -230,7 +230,7 @@
       <p>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</p>
       <p><i class="fas fa-envelope-open"></i>   tinydesigns07@gmail.com</p>
       <p><i class="fab fa-whatsapp-square"></i>(871)596-1588</p>
-      <a href="https://www.facebook.com/tinydesignsS"><p><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</p></a>
+      <p><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</p>
     </div>
     <hr class="clearfix w-100 d-md-none">
     <div class="col-md-5 mx-auto">
@@ -282,7 +282,7 @@
 </div>
 {{#if logueado}}
 <hr>
-{{else}}             
+{{else}}
 <hr>
 <ul class="list-unstyled list-inline text-center py-2">
   <li class="list-inline-item">
@@ -323,5 +323,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+
 </body>
 </html>

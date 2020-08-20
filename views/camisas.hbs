@@ -44,7 +44,7 @@
                     <li><a href="/cerrar">Cerrar sesion</a></li>
                   </ul>
                 </li>
-                
+
                 {{else}}
                 <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
                 {{/if}}
@@ -64,7 +64,7 @@
                     </div>
                     <div class="modal-body">
                         <form method="POST" name="inicio" action="/login">
-                            
+
                             <div class="modal-body">
                                 <img class="img" src="imagenes/avatarx2.png" alt="">
                                 <h2 class="letras">Iniciar sesion</h2>
@@ -95,11 +95,11 @@
           <img src="IMGProyecto/camisas1.png" class="card-img-top" alt="">
           <div class="card-body">
             <h5 class="card-title">Bob Esponja</h5>
-            <p class="card-text">Luce en pareja nuestro nuevo diseño con temática de tu personaje favorito. 
+            <p class="card-text">Luce en pareja nuestro nuevo diseño con temática de tu personaje favorito.
               Personaliza tu pedido con nosotros.
             </p>
             <strong>Juvenil - Infantil</strong>
-            
+
             {{#if logueado}}
             <a href="/personalizaarticulos" class="btn btn-outline-info" id="comprar">Comprar</a>
             {{else}}
@@ -152,7 +152,7 @@
           <img src="IMGProyecto/camisas5.jpg" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">The Simpsons</h5>
-            <p class="card-text">La familia amarilla más querida no podía faltar en nuestros diseños. 
+            <p class="card-text">La familia amarilla más querida no podía faltar en nuestros diseños.
               Diseño para commpartir con la familia.
             </p>
             <strong>Familiar</strong>
@@ -219,8 +219,8 @@
         </div>
       </div><br>
       <!--Archivos .js-->
-<script src="navbar/jquery/jquery.min.js"></script>
-<script src="navbar/js/main.js"></script>
+      <script src="jquery/jquery.min.js"></script>
+      <script src="js/main.js"></script>
 </body>
 <footer class="page-footer font-small stylish-color-dark pt-4" id="foot">
 <div class="container text-center text-md-left">
@@ -230,7 +230,7 @@
       <p>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</p>
       <p><i class="fas fa-envelope-open"></i>   tinydesigns07@gmail.com</p>
       <p><i class="fab fa-whatsapp-square"></i>(871)596-1588</p>
-      <a href="https://www.facebook.com/tinydesignsS"><p><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</p></a>
+      <p><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</p>
     </div>
     <hr class="clearfix w-100 d-md-none">
     <div class="col-md-5 mx-auto">
@@ -282,7 +282,7 @@
 </div>
 {{#if logueado}}
 <hr>
-{{else}}             
+{{else}}
 <hr>
 <ul class="list-unstyled list-inline text-center py-2">
   <li class="list-inline-item">
@@ -296,7 +296,7 @@
 {{/if}}
 <ul class="list-unstyled list-inline text-center">
   <li class="list-inline-item">
-    <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/tinydesignsS">
+    <a class="btn-floating btn-fb mx-1" href="#">
       <i class="fab fa-facebook-f fa-3x"></i>
     </a>
   </li>

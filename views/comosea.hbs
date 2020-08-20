@@ -55,7 +55,7 @@
             <a class="navbar-brand" href="/">
                 <img src="imagenes/nav-tiny.jpeg" width="370px;" height="81px;" alt="" loading="lazy" style="margin: -13px; margin-left: -16px;">
             </a>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left: 450px;">
                 <form class="form-inline my-2 my-lg-0">
                     <a class="nav-link letras" href="#">Eventos</a>
@@ -77,11 +77,11 @@
                     <button type="button" class="btn btn-outline-danger my-2 my-sm-0 letras" style="margin-left: 5px;">
                         <a href="/auth/cerrar" style="text-decoration: none">Cerrar sesion</a>
                     </button>
-                    
+
                     {{else}}
                     <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
-                    
-                
+
+
                     <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" style="margin-left: 5px;">
                         <a href="/crear-cuenta" style="text-decoration: none">Crear cuenta</a>
                     </button>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="modal-body">
                             <form method="POST" action="/auth/login">
-                                
+
                                 <div class="modal-body">
                                     <img class="img" src="imagenes/avatarx2.png" alt="">
                                     <h2 class="letras">Iniciar sesion</h2>
@@ -138,5 +138,7 @@
         <script src="https://unpkg.com/vue/dist/vue.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="jquery/jquery.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>

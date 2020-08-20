@@ -468,11 +468,11 @@ section {
   margin-bottom: 15px;
 }
 
-#about .about-col .img {
+#about .about-col .imgInicio {
   position: relative;
 }
 
-#about .about-col .img img {
+#about .about-col .imgInicio img {
   border-radius: 4px 4px 0 0;
 }
 

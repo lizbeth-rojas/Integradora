@@ -44,7 +44,7 @@
                     <li><a href="/cerrar">Cerrar sesion</a></li>
                   </ul>
                 </li>
-                
+
                 {{else}}
                 <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
                 {{/if}}
@@ -64,7 +64,7 @@
                     </div>
                     <div class="modal-body">
                         <form method="POST" name="inicio" action="/login">
-                            
+
                             <div class="modal-body">
                                 <img class="img" src="imagenes/avatarx2.png" alt="">
                                 <h2 class="letras">Iniciar sesion</h2>
@@ -79,7 +79,7 @@
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-info my-2 btn-block boton" style="font-family: Alesandra;">Continuar</button>
                                   <a href="/crear-cuenta" style="margin-right: 150px;">Aun no tengo cuenta</a></li>
-                                
+
                             </div>
                         </form>
                         {{#if message }}
@@ -146,7 +146,7 @@
           <div class="row about-cols">
             <div class="col-md-4" data-aos="fade-left" data-aos-delay="100">
               <div style="height:470px;" class="about-col">
-                <div class="img">
+                <div class="imgInicio">
                   <img src="img/event1.jpg" style="height:300px; width:360px;" class="img-fluid">
                 </div>
                 <h2 class="title">Diseños de eventos</h2>
@@ -155,7 +155,7 @@
             </div>
             <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
               <div style="height:470px;" class="about-col">
-                <div class="img">
+                <div class="imgInicio">
                   <img src="img/art-termo2.jpg" style="height:300px; " class="img-fluid">
                 </div>
                 <h2 class="title">Articulos diseñados</h2>
@@ -164,7 +164,7 @@
             </div>
             <div class="col-md-4" data-aos="fade-right" data-aos-delay="300" >
               <div class="about-col" style="height:470px;">
-                <div class="img">
+                <div class="imgInicio">
                   <img src="img/invitacion4.jpg"  class="img-fluid">
                 </div>
                 <h2 class="title"><a href="/invitaciones">Invitaciones</a></h2>
@@ -228,7 +228,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:755px; margin-top:-380px;" >
+              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:780px; margin-top:-380px;" >
                 <div class="portfolio-wrap">
                   <figure>
                     <img src="img/large4.jpg"  class="img-fluid" alt="">
@@ -261,7 +261,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:755px; margin-top:-380px;" >
+              <div class="col-lg-4 col-md-6 portfolio-item" style="float:right; margin-left:780px; margin-top:-380px;" >
                 <div class="portfolio-wrap">
                   <figure>
                     <img src="img/event2.jpg"  class="img-fluid" alt="">
@@ -404,14 +404,14 @@
         <li>
           Aviso de privacidad
         </li>
-        
+
       </ul>
     </div>
   </div>
 </div>
 {{#if logueado}}
 <hr>
-{{else}}             
+{{else}}
 <hr>
 <ul class="list-unstyled list-inline text-center py-2">
   <li class="list-inline-item">
@@ -451,4 +451,3 @@
 </div>
 </footer>
 </html>
-
