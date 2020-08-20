@@ -35,8 +35,8 @@ router.post ('/register', Auth.Register);
 router.post ('/login', Auth.Login);
 router.get('/cerrar', Auth.Logout);
 
-router.get('/personalizaarticulos', PersonalizaController.Pers_Articulos);
-router.get('/personalizaeventos', PersonalizaController.Pers_Eventos);
+//router.get('/personalizaarticulos', PersonalizaController.Pers_Articulos);
+//router.get('/personalizaeventos', PersonalizaController.Pers_Eventos);
 
 
 module.exports = router;
