@@ -8,5 +8,5 @@ router.post ('/register', authController.Register);
 router.post ('/login', authController.Login);
 
 router.get('/cerrar', authController.Longout);
-
+router.get('/admin',authController.Pedido)
 module.exports = router;

@@ -13,6 +13,7 @@ router.get ('/crear-cuenta', InicioController.CrearCuenta);
 
 router.get ('/factura', InicioController.Factura);
 
+router.get('/admin', InicioController.Pedido);
 
 
 module.exports = router;

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="BOOTSTRAP/bootstrap-4.1.1/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="event_per.css">
+    <style type="text/css">@font-face{font-family: titulo; src:url(Alesandra.ttf);} </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--recursos para los iconos-->
+    <link href="fontawesome-free-5.14.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-5.14.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-5.14.0-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--bootsrap-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--otros iconos-->
+    <link href="icofont/icofont.min.css" rel="stylesheet">
+    <!--Archivo CSS-->
+    <link href="css/nav.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/event_per.css" rel="stylesheet">
+    <title>{{title}}</title>
+</head>
+<body>
+  <header id="header" class="fixed-top header-transparent">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-11 d-flex align-items-center">
+            <a href="/" class="mr-auto"><img src="images/nav-tinyy.png" style="float:left; margin-left:-40px;"></a>
+            <nav class="nav-menu d-none d-lg-block">
+              <ul>
+                <li class="active"><a href="/administrador">Administrador</a></li>
+                <li class="active"><a href="/MuestraArticulos">Pedidos Articulos</a></li>
+                <li><a href="/MuestraEventos">Pedidos Eventos</a></li>
+                {{#if logueado}}
+                <li class="drop-down"><a href="">{{ name }}</a>
+                  <ul>
+                    <li><a href="/cerrar">Cerrar sesion</a></li>
+                  </ul>
+                </li>
+
+                {{else}}
+                <button type="button" class="btn btn-outline-info my-2 my-sm-0 letras" data-toggle="modal" data-target="#ModalCenter" style="margin-left: 5px;">Iniciar Sesión</button>
+                {{/if}}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--Archivos .js-->
+    <script src="jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--Personalizacion eventos-->
+  <div class="parte3"></div>
+  <!--libs, plugins JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="lib/waypoints/jquery.waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script src="lib/owl.carousel/owl.carousel.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+<footer class="page-footer font-small stylish-color-dark pt-4" id="foot">
+<div class="container text-center text-md-left">
+  <div class="row">
+    <div class="col-md-4 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contacto</h5>
+      <p>Calle Leopoldo Guerra Ote. #8818<br> Col. La Joya<br> Torreón, Coah., México.</p>
+      <p><i class="fas fa-envelope-open"></i>   tinydesigns07@gmail.com</p>
+      <p><i class="fab fa-whatsapp-square"></i>   (871)596-1588</p>
+      <p><a href="https://www.facebook.com/tinydesignsS"><i class="fab fa-facebook-square"></i>   facebook.com/tinydesignsS</a></p>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-5 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Servicios</h5>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Diseño para eventos sociales</h6>
+      <ul class="list-unstyled">
+        {{#if logueado}}
+        <li>
+          <a href="/graduaciones">Graduaciones</a>
+        </li>
+        <li>
+          <a href="/infantiles">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="bodas">Bodas</a>
+        </li>
+        <li>
+          <a href="/xv">Fiestas de XV</a>
+        </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Graduaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas infantiles</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Bodas</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Fiestas de XV</a>
+        </li>
+        {{/if}}
+      </ul>
+      <h6 class="font-weight-bold text-uppercase mt-3 mb-4">Venta de articulos</h6>
+      <ul class="list-unstyled">
+        {{#if logueado}}
+        <li>
+          <a href="/invitaciones">Invitaciones</a>
+        </li>
+        <li>
+          <a href="/globos">Globos</a>
+        </li>
+        <li>
+          <a href="/termos">Termos</a>
+        </li>
+        <li>
+          <a href="/camisas">Camisas</a>
+        </li>
+        {{else}}
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Invitaciones</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Globos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Termos</a>
+        </li>
+        <li>
+          <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Camisas</a>
+        </li>
+        {{/if}}
+      </ul>
+    </div>
+    <hr class="clearfix w-100 d-md-none">
+    <div class="col-md-2 mx-auto">
+      <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Acerca de nosotros</h5>
+      <ul class="list-unstyled">
+        <li>
+          <a href="/">¿Quiénes somos?</a>
+        </li>
+        <li>
+          Aviso de privacidad
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+{{#if logueado}}
+<hr>
+{{else}}
+<hr>
+<ul class="list-unstyled list-inline text-center py-2">
+  <li class="list-inline-item">
+    <a href="/crear-cuenta" class="btn btn-primary btn-rounded ejemplo2">Registrarse</a>
+  </li>
+  <li class="list-inline-item ">
+    <a href="" class="btn btn-danger btn-rounded ejemplo3" data-toggle="modal" data-target="#ModalCenter">Iniciar Sesion</a>
+  </li>
+</ul>
+<hr>
+{{/if}}
+<ul class="list-unstyled list-inline text-center">
+  <li class="list-inline-item">
+    <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/tinydesignsS">
+      <i class="fab fa-facebook-f fa-3x"></i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-tw mx-1">
+      <i class="fab fa-twitter fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-li mx-1">
+      <i class="fab fa-linkedin-in fa-3x"> </i>
+    </a>
+  </li>
+  <li class="list-inline-item">
+    <a class="btn-floating btn-dribbble mx-1">
+      <i class="fab fa-instagram-square fa-3x"></i>
+    </a>
+  </li>
+</ul>
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a href="#"> by SupporT</a>
+
+</div>
+</footer>
+</html>
