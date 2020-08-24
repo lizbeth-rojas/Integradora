@@ -104,37 +104,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample">
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Texto:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Happy Birthday Colors" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
         </div>
         </div>
@@ -152,43 +159,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample2">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample2">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                    <input type="hidden" value="Columnas" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
-            <div class="collapse" id="collapseExample2">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+              <div class="collapse" id="collapseExample2">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
-                  </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
               </div>
-            </div>
+            </form>
             
           </div>
         </div>
@@ -206,31 +214,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample3">
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Número(s):</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample3">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample3">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Happy Birthday - Colors Metalic" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample3">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -249,37 +270,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample4">
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Texto:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample4">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Happy Birthday - Transparents" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample4">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -297,32 +325,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample5">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample5">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample5">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Circle Colors" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample5">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -340,32 +380,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample6">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample6">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample6">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Unicorns Love" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample6">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -384,37 +436,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample7">
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Número(s):</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample7">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample7">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                  <input type="hidden" value="Balloons Package" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample7">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -432,32 +491,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample8">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample8">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample8">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Watercolor" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample8">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>
@@ -475,32 +546,44 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample9">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
-                </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample9">
-              <div class="card card-body">
-                <div class="input-group mb-3">
+            <form method="POST" action="/pedglobo">
+              <div class="collapse" id="collapseExample9">
+                <div class="input-group input-group-sm mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    <input type="hidden" value="Special Colors" name="Globo1">
+                    <label class="input-group-text" for="inputGroupSelect01">Texto :</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Tex2">
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                </div>
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-sm">Unidades:</span>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                   </select>
                 </div>
               </div>
-            </div>
+              <div class="collapse" id="collapseExample9">
+                <div class="card card-body">
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <label class="input-group-text" for="inputGroupSelect01">Tamaño:</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01" name="Tama">
+                      <option value="CH">CH</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                    </select>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+              </div>
+            </form>
             
           </div>
         </div>

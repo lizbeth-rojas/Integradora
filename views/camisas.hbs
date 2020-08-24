@@ -107,19 +107,33 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample2">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample2">
+              <input type="hidden" value="Bob Esponja" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Transparente">Bob</option>
+                    <option value="Negro">Patric</option>
                   </select>
                 </div>
               </div>
@@ -130,16 +144,29 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
             </div>
-            
+            <div class="collapse" id="collapseExample2">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+            </div>
+            </form>            
         </div>
         </div>
         <div class="card" id="medio">
@@ -155,19 +182,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample">
+              <input type="hidden" value="Queen and King" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -178,16 +206,10 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Morado">Morado</option>
                   </select>
                 </div>
               </div>
@@ -198,15 +220,29 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
             </div>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+            </div>
+            </form>
             
           </div>
         </div>
@@ -223,19 +259,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample3">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample3">
+              <input type="hidden" value="Goku" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -246,16 +283,12 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Amarillo">Amarillo</option>
                   </select>
                 </div>
               </div>
@@ -266,11 +299,9 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
@@ -281,15 +312,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
               </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
             </div>
+            </form>
             
           </div>
         </div>
@@ -308,70 +340,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample4">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample4">
+              <input type="hidden" value="Mouse" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Dama</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Caballero</label>
-                  </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Bebés</label>
-                  </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample4">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Niños</label>
-                  </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -382,20 +364,45 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Verde">Verde</option>
                   </select>
                 </div>
               </div>
             </div>
+            <div class="collapse" id="collapseExample4">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Genero</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample4">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+            </div>
+            </form>
             
           </div>
         </div>
@@ -414,36 +421,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample5">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample5">
+              <input type="hidden" value="The Simpsons" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Dama</label>
+                    <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample5">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Talla Caballero</label>
-                  </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH </option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL </option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -454,20 +445,47 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Amarillo">Amarillo</option>
                   </select>
                 </div>
               </div>
             </div>
+            <div class="collapse" id="collapseExample5">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Genero</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample5">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+            </div>
+            </form>
             
           </div>
         </div>
@@ -484,19 +502,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample6">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample6">
+              <input type="hidden" value="Música" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -507,16 +526,9 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Morado">Gris</option>
+                    <option value="Blanco">Blanco</option>
                   </select>
                 </div>
               </div>
@@ -527,11 +539,9 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
@@ -542,15 +552,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
               </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
             </div>
+            </form>
             
           </div>
         </div>
@@ -569,19 +580,34 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample7">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample7">
+              <input type="hidden" value="Dragon Ball Z - Goku" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample7">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Morado">Morado</option>
                   </select>
                 </div>
               </div>
@@ -592,11 +618,9 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
@@ -607,15 +631,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
               </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
             </div>
+            </form>
             
           </div>
         </div>
@@ -632,34 +657,20 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample8">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample8">
+              <input type="hidden" value="Dragon Ball Z - Gohan" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div class="collapse" id="collapseExample8">
-              <div class="card card-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Genero</label>
-                  </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -670,16 +681,27 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Color</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Transparente</option>
-                    <option value="2">Negro</option>
-                    <option value="3">Naranja</option>
-                    <option value="4">Rosa</option>
-                    <option value="5">Azul</option>
-                    <option value="6">Morado</option>
-                    <option value="7">Verde</option>
-                    <option value="8">Amarillo</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Naranja">Naranja</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Amarillo">Amarillo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample8">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Genero</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
@@ -690,15 +712,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
               </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
             </div>
+            </form>
             
           </div>
         </div>
@@ -715,19 +738,35 @@
                 Personalizar
               </a>
             </p>
-            <div class="collapse" id="collapseExample9">
+            <form method="POST" action="/pedcamisa">
+              <div class="collapse" id="collapseExample9">
+              <input type="hidden" value="Dragon Ball Z - Vegeta & Goku" name="Camisa1">
               <div class="card card-body">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Talla</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">CH</option>
-                    <option value="2">M</option>
-                    <option value="3">G</option>
-                    <option value="3">XL</option>
-                    <option value="3">XXL</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Talla">
+                    <option value="CH">CH</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="collapseExample9">
+              <div class="card card-body">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                  </div>
+                  <select class="custom-select" id="inputGroupSelect01" name="Color">
+                    <option value="Negro">Negro</option>
+                    <option value="Rosa">Rosa</option>
+                    <option value="Morado">Morado</option>
+                    <option value="Amarillo">Amarillo</option>
                   </select>
                 </div>
               </div>
@@ -738,11 +777,9 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Genero</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Dama</option>
-                    <option value="2">Caballero</option>
-                    <option value="3">Ambos</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Genero">
+                    <option value="Dama">Dama</option>
+                    <option value="Caballero">Caballero</option>
                   </select>
                 </div>
               </div>
@@ -753,15 +790,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Unidades">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
               </div>
+              <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
             </div>
+            </form>
             
           </div>
         </div>

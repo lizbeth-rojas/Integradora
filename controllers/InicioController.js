@@ -16,13 +16,11 @@ const CrearCuenta = (req, res) => {
 	
 }
 
-const Factura = (req, res) => {
-	res.render ('factura.hbs')
-}
+
 
 module.exports = {
     Inicio,
     CrearCuenta,
-    Factura
+   
 }
 
