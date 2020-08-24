@@ -47,8 +47,10 @@ router.get('/administrador', InicioController.Administrador);
 router.get('/MuestraArticulos', InicioController.Pers_Articulos);
 router.get('/MuestraEventos', InicioController.Pers_Eventos);
 
-//router.get('/personalizaarticulos', PersonalizaController.Pers_Articulos);
-//router.get('/personalizaeventos', PersonalizaController.Pers_Eventos);
+
+router.get('/administrador', InicioController.Administrador);
+router.get('/MuestraArticulos', InicioController.Pers_Articulos);
+router.get('/MuestraEventos', InicioController.Pers_Eventos);
 
 
 module.exports = router;
