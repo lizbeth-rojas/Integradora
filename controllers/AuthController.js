@@ -205,7 +205,9 @@ exports.PedidoEv = (req, res)=>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				message: 'Solicitud enviada con exito'
+				name: req.session.correo, 
+				message: 'Solicitud enviada con exito',
+				logueado: req.session.loggedin
 		});
 }
 
@@ -262,6 +264,7 @@ exports.Camisas = (req, res) =>{
 			us =res2.ID_cliente;
 			console.log(us);
 		})
+	
 		datillos= [ Unidades,cos, montF, desc2, us, idart]
 		const consulta = await conn.query("INSERT INTO pedidos_art (unidades, precio_unidad, monto, descripcion, id_cliente_fk, id_art_fk) VALUES ?", [datillos]);
 
@@ -272,7 +275,9 @@ exports.Camisas = (req, res) =>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				message: 'Solicitud de Camisa(s) enviada con exito'
+				name: req.session.correo,
+				message: 'Solicitud de Camisa(s) enviada con exito',
+				logueado: req.session.loggedin
 		});
 }
 
@@ -340,7 +345,9 @@ exports.Termos = (req, res) =>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				message: 'Solicitud de Termo(s)enviada con exito'
+				name: req.session.correo,
+				message: 'Solicitud de Termo(s)enviada con exito',
+				logueado: req.session.loggedin
 		});
 }
 
@@ -407,7 +414,9 @@ exports.Invita = (req, res) =>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				message: 'Solicitud de Invitaciones enviada con exito'
+				name: req.session.correo,
+				message: 'Solicitud de Invitaciones enviada con exito',
+				logueado: req.session.loggedin, 
 		});
 }
 
@@ -475,6 +484,8 @@ exports.Globos = (req, res) => {
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				message: 'Solicitud de Globo(s) enviada con exito'
+				name: req.session.correo,
+				message: 'Solicitud de Globo(s) enviada con exito',
+				logueado: req.session.loggedin
 		});
 }
