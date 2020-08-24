@@ -33,6 +33,14 @@ router.get('/globos', ArticulosController.Globos);
 
 router.post ('/register', Auth.Register);
 router.post ('/login', Auth.Login);
+//Pedidos Eventos - Articulos
+router.post ('/pedidoev', Auth.PedidoEv);
+
+router.post ('/pedcamisa',Auth.Camisas);
+router.post ('/pedtermo', Auth.Termos);
+router.post ('/pedinvita', Auth.Invita);
+router.post ('/pedglobo', Auth.Globos);
+
 router.get('/cerrar', Auth.Logout);
 
 router.get('/administrador', InicioController.Administrador);

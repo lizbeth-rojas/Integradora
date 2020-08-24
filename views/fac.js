@@ -6,23 +6,47 @@ const Handlebars = require('handlebars')
 const cons = require('consolidate')
 const ReadFile = Util.promisify(Fs.readFile)
 
+//var getData1 = function(){
+  
+  //console.log(getData)
+  //let form = document.forms["formulario1"];
+  //console.log(form);
+
+  //let comida= form.Comida.value;
+  //let personas= form.Personas.value;
+  //let lugar= form.Lugar.value;
+
+  //let pdef = new Invoice ();
+  //pdef.pdf();
+//}
+//let comida= "si";
+//let Personas= "4";
+//let Lugar= "No";
+
 class Invoice {  
   async html() {
     try {
       const data = {
-        your: 'data'
+        Comida: comida,
+        personas: Personas,
+        lugar: Lugar
       }
 
-      const templatePath = Path.resolve('views', 'factura.hbs')
+      const templatePath = Path.resolve('factura.hbs')
       const content = await ReadFile(templatePath, 'utf8')
-      //console.log(templatePath);
+      console.log(templatePath);
 
       // compile and render the template with handlebars
       const template = Handlebars.compile(content)
 
-      return template(data)
+      //return template(data)
+      var pdfdata = template(data)
+      return pdfdata
+
+
     } catch (error) {
-      throw new Error('No se pudo crear la plantilla.')
+      //console.log(templatePath);
+      throw new Error(error)
     }
   }
 
@@ -41,6 +65,7 @@ class Invoice {
     
   }
 }
+
 let pdef = new Invoice ();
 
 
@@ -48,5 +73,5 @@ let pdef = new Invoice ();
 // Agregar listener
 //document.getElementById("boton").addEventListener("click", function() {
 pdef.pdf();
-//  	console.log("has pulsado el botón 1");
+//    console.log("has pulsado el botón 1");
 //});

@@ -99,6 +99,43 @@
 
             {{#if logueado}}
             <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+<!--Modal1-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+          <input type="hidden" value="Infantil - Unicornio" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)1:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -111,9 +148,9 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal2" data-whatever="@mdo">Especificaciones</button>
+<!--Modal2-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -123,24 +160,27 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="/pedinvita" name="Invita1">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Nombre(s):</label>
-            <input type="text" class="form-control" id="recipient-name">
+          <input type="hidden" value="Infantil - Sirena" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)2:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
           </div>
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Unidades:</label>
-            <input type="text" class="form-control" id="recipient-name">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Detalles:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
           </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Aceptar</button>
       </div>
     </div>
   </div>
@@ -157,7 +197,43 @@
             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal3" data-whatever="@mdo">Especificaciones</button>
+<!--Modal3-->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+          <input type="hidden" value="Mouse" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)3:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -172,7 +248,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal4" data-whatever="@mdo">Especificaciones</button>
+<!--Modal4-->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+          <input type="hidden" value="Graduation - Formal" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)4:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -185,7 +297,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal5" data-whatever="@mdo">Especificaciones</button>
+<!--Modal5-->
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+            <input type="hidden" value="Graduation - Ceremony" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)5:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -198,7 +346,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal6" data-whatever="@mdo">Especificaciones</button>
+<!--Modal6-->
+<div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+            <input type="hidden" value="Graduation Package" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)6:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -213,7 +397,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal7" data-whatever="@mdo">Especificaciones</button>
+<!--Modal7-->
+<div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+            <input type="hidden" value="XV" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)7:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -226,7 +446,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal8" data-whatever="@mdo">Especificaciones</button>
+<!--Modal8-->
+<div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+            <input type="hidden" value="Passport - París" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)8:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -239,7 +495,43 @@
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
 
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal9" data-whatever="@mdo">Especificaciones</button>
+<!--Modal9-->
+<div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+          <input type="hidden" value="Party" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)9:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -253,7 +545,43 @@
             <h5 class="card-title">Wedding</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal10" data-whatever="@mdo">Especificaciones</button>
+<!--Modal10-->
+<div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+          <input type="hidden" value="Wedding" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)10:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -265,7 +593,43 @@
             <h5 class="card-title">Wedding Two</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal11" data-whatever="@mdo">Especificaciones</button>
+<!--Modal11-->
+<div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita" name="Invita1">
+          <div class="form-group">
+            <input type="hidden" value="Wedding Two" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)11:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}
@@ -277,7 +641,43 @@
             <h5 class="card-title">Wedding Three</h5>
             <p class="card-text">¡Inspiración para todos los Eventos de tu Vida!</p>
             {{#if logueado}}
-            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Especificaciones</button>
+            <button type="button" class="btn btn-outline-danger" id="especific" data-toggle="modal" data-target="#exampleModal12" data-whatever="@mdo">Especificaciones</button>
+<!--Modal12-->
+<div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Especificaciones</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form method="POST" action="/pedinvita">
+          <div class="form-group">
+            <input type="hidden" value="Wedding Three" name="Invita1">
+            <label for="recipient-name" class="col-form-label">Nombre(s)12:</label>
+            <input type="text" class="form-control" id="recipient-name" name="Nombre">
+          </div>
+          <div class="form-group">
+            <label class="input-group-text" for="inputGroupSelect01">Unidades</label>
+              <select class="custom-select" id="inputGroupSelect01" name="Unidades">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Detalles:</label>
+            <textarea class="form-control" id="message-text" name="Detall"></textarea>
+          </div>
+          <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Registrar Compra</button>
+          <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
             {{else}}
             <a href="#" class="btn btn-outline-info" data-toggle="modal" data-target="#ModalCenter" type="button" type="button" id="comprar">Comprar</a>
             {{/if}}

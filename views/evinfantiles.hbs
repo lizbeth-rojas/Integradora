@@ -82,7 +82,7 @@
                           </div>
                       </form>
                       {{#if message }}
-                          <h4 class="alert alert-danger mt-3" style="text-align: center;">{{message}}</h4>
+                          <h4 class="alert alert-success mt-3" style="text-align: center;">{{message}}</h4>
                       {{/if}}
                   </div>
               </div>
@@ -120,28 +120,31 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+   	        <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample">
               <div class="card card-body">
+                <input type="hidden" value="Fiesta Temática de Dora la Exploradora" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample">
@@ -150,16 +153,18 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
+            </form>
           </div>
+          
       
 
     </div>
@@ -183,28 +188,31 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+          <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample2">
               <div class="card card-body">
+                <input class="" type="hidden" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="Fiesta Tematica de Sonic" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample2">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample2">
@@ -213,17 +221,17 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
-          </div>
-      
+            </form>
+          </div>  
 
     </div>
 
@@ -246,28 +254,31 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+          <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample3">
               <div class="card card-body">
+                <input class="" type="hidden" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="Fiesta Tematica de Spider-Man" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample3">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample3">
@@ -276,15 +287,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
+            </form>
           </div>
       
 
@@ -309,28 +321,31 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+          <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample4">
               <div class="card card-body">
+                <input class="" type="hidden" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="Fiesta Tematica de Toy Story" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample4">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample4">
@@ -339,15 +354,16 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
+            </form>
           </div>
       
 
@@ -372,28 +388,31 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+          <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample5">
               <div class="card card-body">
+                <input class="" type="hidden" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="Fiesta Tematica de Mickey Mouse" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample5">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample5">
@@ -402,15 +421,17 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
                     <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
+            </form>
           </div>
       
 
@@ -435,28 +456,32 @@
           Personalizar
         </a>
       </p>
-          <div style="width: 400px;"> 
+            <form method="POST" action="/pedidoev" name="formulario1">
+            <div style="width: 400px;"> 
             <div class="collapse" id="collapseExample6">
               <div class="card card-body">
+                <input class="" type="hidden" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="Fiesta Tematica de Pocoyo" name="Evento1">
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
+                    <br>
                     <label class="input-group-text" for="inputGroupSelect01">Mesa de Snack:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
+                  <select class="custom-select" id="inputGroupSelect01" name="Comida">
                     <option selected>Choose...</option>
-                    <option value="1">Si</option>
-                    <option value="2">No</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="collapse" id="collapseExample6">
-              
-              <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">Capacidad (personas):</span>
+              <div class="card card-body">
+                <div class="input-group input-group-sm mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Capacidad (Personas):</label>
+                    <input class="form-control" type="text" id="inputGroup-sizing-sm" name="Personas">
+                  </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
               </div>
             </div>
             <div class="collapse" id="collapseExample6">
@@ -465,16 +490,18 @@
                   <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Tipo de Evento:</label>
                   </div>
-                  <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Choose...</option>
-                    <option value="1">Salón</option>
-                    <option value="2">Hogar</option>
-                    <option value="2">Aire Libre</option>
+                  <select class="custom-select" id="inputGroupSelect01" name="Lugar">
+                    <option value="Salon">Salón</option>
+                    <option value="Hogar">Hogar</option>
+                    <option value="Aire Libre">Aire Libre</option>
                   </select>
                 </div>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" style="align">Enviar</button>
               </div>
             </div>
+            </form>
           </div>
+
       
 
     </div>
@@ -589,5 +616,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
 <script src="jquery/jquery.min.js"></script>
 <script src="js/main.js"></script>
+
+<script type="text/javascript" src="fac.js"></script>
+
 </body>
 </html>
