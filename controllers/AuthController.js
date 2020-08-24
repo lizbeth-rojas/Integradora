@@ -205,9 +205,9 @@ exports.PedidoEv = (req, res)=>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				name: req.session.correo, 
-				message: 'Solicitud enviada con exito',
-				logueado: req.session.loggedin
+				name: req.session.correo,
+				logueado: req.session.loggedin,
+				message: 'Solicitud enviada con exito'
 		});
 }
 
@@ -275,9 +275,9 @@ exports.Camisas = (req, res) =>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				name: req.session.correo,
-				message: 'Solicitud de Camisa(s) enviada con exito',
-				logueado: req.session.loggedin
+				//name: req.session.correo,
+				//logueado: req.session.loggedin,
+				message: 'Solicitud de Camisa(s) enviada con exito'
 		});
 }
 
@@ -346,8 +346,8 @@ exports.Termos = (req, res) =>{
 
 	return res.render('iniciob.hbs', {
 				name: req.session.correo,
-				message: 'Solicitud de Termo(s)enviada con exito',
-				logueado: req.session.loggedin
+				logueado: req.session.loggedin,
+				message: 'Solicitud de Termo(s)enviada con exito'
 		});
 }
 
@@ -485,7 +485,7 @@ exports.Globos = (req, res) => {
 
 	return res.render('iniciob.hbs', {
 				name: req.session.correo,
-				message: 'Solicitud de Globo(s) enviada con exito',
-				logueado: req.session.loggedin
+				logueado: req.session.loggedin,
+				message: 'Solicitud de Globo(s) enviada con exito'
 		});
 }
