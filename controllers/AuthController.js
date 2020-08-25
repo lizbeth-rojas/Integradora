@@ -49,7 +49,7 @@ exports.Register = (req, res) => {
 	let hashedPassword = await bcrypt.hash(pass, 8);
 	console.log(hashedPassword);
 
-	valores = [nombre, correo, telefono, domicilio, hashedPassword]
+	valores = [nombre, correo, telefono, domicilio, pass]
 	let fetchData = async () => {
 			let conn;
 		  	try {
