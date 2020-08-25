@@ -49,6 +49,7 @@ router.get('/MuestraArticulos', InicioController.Pers_Articulos);
 router.get('/MuestraEventos', InicioController.Pers_Eventos);
 router.post('/Loginadmin', adminController.Loginadmin);
 router.get('/tabla1', adminController.Ped_event);
+router.get('/Ped_Art', adminController.Ped_art);
 
 
 

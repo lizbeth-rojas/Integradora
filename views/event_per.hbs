@@ -37,7 +37,7 @@
               <ul>
                 <li class="active"><a href="/administrador">Administrador</a></li>
                 <li class="active"><a href="/MuestraArticulos">Pedidos Articulos</a></li>
-                <li><a href="/tabla1">Pedidos Eventos</a></li>
+                <li><a href="">Pedidos Eventos</a></li>
                 {{#if logueado}}
                 <li class="drop-down"><a href="">{{ name }}</a>
                   <ul>
@@ -76,18 +76,11 @@
           </tr>
         </thead>
         <tbody>
-        <tr>
-          <td style="text-align: center;">{{}}</td>
-          <td class=" text-right ">{{}}</td>
-          <td class=" text-right ">{{}}</td>
-          
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><a href="#"> &nbsp; </a></td>
-          <td class="text-right">&nbsp;</td>
-          <td class="text-right ">&nbsp;</td>
-        </tr>
+            <tr>
+              <td style="text-align: center;">{{idevento}}</td>
+              <td class=" text-right ">{{descripcion}}</td>
+              <td class=" text-right ">{{monto}}</td> 
+            </tr>
         </tbody>
       </table>
     </div>  

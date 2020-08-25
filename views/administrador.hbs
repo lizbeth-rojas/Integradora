@@ -37,14 +37,14 @@
               <ul>
                 <li class="active"><a href="/">inicio</a></li>
                 {{#if logueado}}
-                <li class="active"><a href="/MuestraArticulos">Pedidos Articulos</a></li>
-                <li><a href="/MuestraEventos">Pedidos Eventos</a></li>
+                <li class="active"><a href="/Ped_Art">Pedidos Articulos</a></li>
+                <li><a href="/tabla1">Pedidos Eventos</a></li>
                 {{else}}
                 <li>
-                  <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Pedidos Articulos</a>
+                  <a href="Ped_Art" data-toggle="modal" data-target="#ModalCenter" type="button">Pedidos Articulos</a>
                 </li>
                 <li>
-                  <a href="" data-toggle="modal" data-target="#ModalCenter" type="button">Pedidos Eventos</a>
+                  <a href="/tabla1" data-toggle="modal" data-target="#ModalCenter" type="button">Pedidos Eventos</a>
                 </li>
                 {{/if}}
                 {{#if logueado}}

@@ -69,16 +69,63 @@ exports.Ped_event =(req, res) =>{
     let idevento;
     let monto;
     let descripcion;
+    let array = [];
     let fetchData = async () =>{
         conn = await pool.getConnection();
         const ped_ev = await conn.query('SELECT * FROM pedidos_eventos');
         ped_ev.forEach((ped_ev) => {
             console.log(" events: " + ped_ev.descripcion, ped_ev.monto, ped_ev.id_evento_fk); 
+            idevento = ped_ev.id_evento_fk,
+            monto = ped_ev.monto,
+            descripcion = ped_ev.descripcion
+            array.push(ped_ev)
         })
+        console.log(ped_ev[1]);
+        console.log(array + "konda");
+        console.log(idevento, monto, descripcion+ "knvksd")
         return res.render('event_per.hbs', {
-            idevento : ped_ev.id_evento_fk,
-            monto : ped_ev.monto,
-            descripcion : ped_ev.descripcion
+            idevento: idevento,
+            monto : monto,
+            descripcion : descripcion,
+            title: 'TinyDesigns - Eventos Pendientes',
+            name: req.session.correo,
+            logueado: req.session.loggedin 
+        });
+    }
+    fetchData()
+}
+exports.Ped_art =(req,res) =>{
+    let conn;
+    let idart;
+    let monto;
+    let descripcion;
+    let unidades;
+    let xunidad;
+    let datos;
+    let array = [];
+    let fetchData = async () =>{
+        conn = await pool.getConnection();
+        const ped_art = await conn.query('SELECT * FROM pedidos_art');
+        ped_art.forEach((ped_art) => {
+            console.log(" events: " + ped_art.descripcion, ped_art.monto, ped_art.id_art_fk, ped_art.unidades, ped_art.xunidad,); 
+            idart = ped_art.id_art_fk,
+            monto = ped_art.monto,
+            descripcion = ped_art.descripcion,
+            unidades = ped_art.unidades,
+            xunidad = ped_art.xunidad
+            datos=(idart,monto,descripcion,unidades,xunidad)
+        })
+        console.log(idart, xunidad, unidades, descripcion, monto  + "knvksd")
+        return res.render('art_per.hbs', {
+            datos:datos,
+            idart: idart,
+            monto : monto,
+            descripcion : descripcion,
+            unidades : unidades,
+            xunidad : xunidad,
+            title: 'TinyDesigns - Artículos Pendientes',
+            name: req.session.correo,
+            logueado: req.session.loggedin 
         });
     }
     fetchData()
