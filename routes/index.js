@@ -5,7 +5,7 @@ const ArticulosController = require('../controllers/ArticulosController');
 const InicioController = require('../controllers/InicioController');
 const EventController = require('../controllers/EventController');
 const Auth = require('../controllers/AuthController');
-const PersonalizaController = require('../controllers/PersonalizaController');
+const adminController = require('../controllers/AdminController');
 //console.log('dsgfiuagf');
 router.get('/', InicioController.Inicio);
 
@@ -44,9 +44,11 @@ router.post ('/pedglobo', Auth.Globos);
 router.get('/cerrar', Auth.Logout);
 
 router.get('/administrador', InicioController.Administrador);
+
 router.get('/MuestraArticulos', InicioController.Pers_Articulos);
 router.get('/MuestraEventos', InicioController.Pers_Eventos);
-
+router.post('/Loginadmin', adminController.Loginadmin);
+router.get('/tabla1', adminController.Ped_event);
 
 
 

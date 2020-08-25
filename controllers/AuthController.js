@@ -77,16 +77,17 @@ exports.Login = (req, res) => {
 	if (correo && pass) {
 		let fetchData = async () => {
 			let conn;
+			let paswd;
 		  	try {
 				conn = await pool.getConnection();
 				const consulta = await conn.query("SELECT * FROM clientes WHERE contacto_alt = ?", [correo]);
 				consulta.forEach((consulta) => {
 					respu = consulta.contacto_alt;
-					
-					console.log("cuenta " + consulta.contacto_alt); 
+					paswd = consulta.password;
+					console.log("cuenta: " + consulta.contacto_alt, consulta.password); 
 				})
 				var respu;
-					if (respu === correo) {
+					if (respu === correo && paswd == pass) {
 						req.session.loggedin = true;
 						req.session.correo = correo;
 						console.log("esta logueado? " + req.session.loggedin)

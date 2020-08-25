@@ -21,6 +21,7 @@ const CrearCuenta = (req, res) => {
 
 //ADMINISTRADOR
 const Administrador = (req, res) => {
+  
   res.render('administrador.hbs', {
     title: 'TinyDesigns - Administrador',
     name: req.session.correo,
