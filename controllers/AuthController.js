@@ -162,7 +162,6 @@ exports.PedidoEv = (req, res)=>{
 		}
 	}
 	fetchData()
-
 	return res.render('iniciob.hbs', {
 				name: req.session.correo,
 				logueado: req.session.loggedin,
