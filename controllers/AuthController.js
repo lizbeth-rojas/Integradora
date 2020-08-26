@@ -234,8 +234,8 @@ exports.Camisas = (req, res) =>{
 	fetchData()
 
 	return res.render('iniciob.hbs', {
-				//name: req.session.correo,
-				//logueado: req.session.loggedin,
+				name: req.session.correo,
+				logueado: req.session.loggedin,
 				message: 'Solicitud de Camisa(s) enviada con exito'
 		});
 }
