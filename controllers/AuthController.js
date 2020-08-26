@@ -59,6 +59,7 @@ exports.Register = (req, res) => {
 				req.session.correo = correo;
 				console.log("esta logueado? " + req.session.loggedin)
 				res.redirect('/');
+			conn.end();
 			}catch (err) {
 				throw err
 				}
@@ -101,6 +102,7 @@ exports.Login = (req, res) => {
 						res.end();
 					}			
 					res.end();
+				conn.end();
 			}catch (err) {
 				throw err
 				}
@@ -156,7 +158,7 @@ exports.PedidoEv = (req, res)=>{
 		})
 		datillos= [cos, desc, us, idev]
 		const consulta = await conn.query("INSERT INTO pedidos_eventos (monto, descripcion, id_cliente_fk, id_evento_fk) VALUES ?", [datillos]);
-
+		conn.end();
 	 }catch (err) {
 		throw err
 		}
@@ -225,7 +227,7 @@ exports.Camisas = (req, res) =>{
 	
 		datillos= [ Unidades,cos, montF, desc2, us, idart]
 		const consulta = await conn.query("INSERT INTO pedidos_art (unidades, precio_unidad, monto, descripcion, id_cliente_fk, id_art_fk) VALUES ?", [datillos]);
-
+		conn.end();
 	 }catch (err) {
 		throw err
 		}
@@ -295,7 +297,7 @@ exports.Termos = (req, res) =>{
 		})
 		datillos= [ Unidades,cos, montF, desc2, us, idart]
 		const consulta = await conn.query("INSERT INTO pedidos_art (unidades, precio_unidad, monto, descripcion, id_cliente_fk, id_art_fk) VALUES ?", [datillos]);
-
+		conn.end();
 	 }catch (err) {
 		throw err
 		}
@@ -364,7 +366,7 @@ exports.Invita = (req, res) =>{
 		})
 		datillos= [ Unidades,cos, montF, desc2, us, idart]
 		const consulta = await conn.query("INSERT INTO pedidos_art (unidades, precio_unidad, monto, descripcion, id_cliente_fk, id_art_fk) VALUES ?", [datillos]);
-
+		conn.end();
 	 }catch (err) {
 		throw err
 		}
@@ -434,7 +436,7 @@ exports.Globos = (req, res) => {
 		})
 		datillos3= [ Unidades,cos, montF, desc2, us, idart]
 		const consulta = await conn.query("INSERT INTO pedidos_art (unidades, precio_unidad, monto, descripcion, id_cliente_fk, id_art_fk) VALUES ?", [datillos3]);
-
+		conn.end();
 	 }catch (err) {
 		throw err
 		}
