@@ -76,11 +76,13 @@
           </tr>
         </thead>
         <tbody>
-            <tr>
-              <td style="text-align: center;">{{idevento}}</td>
-              <td class=" text-right ">{{descripcion}}</td>
-              <td class=" text-right ">{{monto}}</td> 
-            </tr>
+            {{#each regis}}
+                <tr>
+                  <td style="text-align: center;">{{id_evento_fk}}</td>
+                  <td class=" text-center ">{{descripcion}}</td>
+                  <td class=" text-center ">{{monto}}</td>      
+                </tr>
+            {{/each}} 
         </tbody>
       </table>
     </div>  

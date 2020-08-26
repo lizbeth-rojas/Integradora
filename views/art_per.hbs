@@ -80,13 +80,15 @@
           </tr>
         </thead>
         <tbody>
+          {{#each datos}}
             <tr>
               <td style="text-align: center;">{{unidades}}</td>
-              <!--<td class=" text-right ">{{idart}}</td>-->
+              <td class=" text-right ">{{id_art}}</td>
               <td class="text align: center;">{{descripcion}}</td>
               <!--<td class=" text-right ">{{xunidad}}</td> -->
               <td class="text-right">{{monto}}</td>
             </tr>
+          {{/each}}  
         </tbody>
       </table>
     </div>
