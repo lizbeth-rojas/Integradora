@@ -78,12 +78,14 @@ exports.Login = (req, res) => {
 		let fetchData = async () => {
 			let conn;
 			let paswd;
+			let rango;
 		  	try {
 				conn = await pool.getConnection();
 				const consulta = await conn.query("SELECT * FROM clientes WHERE contacto_alt = ?", [correo]);
 				consulta.forEach((consulta) => {
 					respu = consulta.contacto_alt;
 					paswd = consulta.password;
+					rango = consulta.puesto;
 					console.log("cuenta: " + consulta.contacto_alt, consulta.password); 
 				})
 				var respu;
@@ -112,50 +114,6 @@ exports.Login = (req, res) => {
 	}
 };
 
-exports.RegPedido = (req, res) =>{
-	const { nombre, correo, telefono, domicilio, pass } = req.body;
-	let fetchData = async () => {
-	let conn;
-	try {
-		conn = await pool.getConnection();
-		console.log(correo)
-		var pure = "";
-		const res = await conn.query("SELECT contacto_alt FROM clientes WHERE contacto_alt = ?", [correo]);
-		res.forEach((res) => {
-			pure = res.contacto_alt;
-			console.log(res.contacto_alt); 
-		})
-	} catch (err) {
-		throw err
-		}
-	if(pure === correo ) {
-		return res.render('registro.hbs', {
-			message: 'El correo ingresado ya existe'
-		});
-	}
-
-	let hashedPassword = await bcrypt.hash(pass, 8);
-	console.log(hashedPassword);
-
-	valores = [nombre, correo, telefono, domicilio, hashedPassword]
-	let fetchData = async () => {
-			let conn;
-		  	try {
-				conn = await pool.getConnection();
-				const consulta = await conn.query("INSERT INTO clientes (nombre, contacto_alt, telefono, direccion, password) VALUES ?", [valores]);
-				req.session.loggedin = true;
-				req.session.correo = correo;
-				console.log("esta logueado? " + req.session.loggedin)
-				res.redirect('/');
-			}catch (err) {
-				throw err
-				}
-		}
-		fetchData()
-
-	}
-	fetchData()
-}
 
 
 exports.Logout = (req, res) => {
@@ -181,7 +139,7 @@ exports.PedidoEv = (req, res)=>{
 		var cos ="";
 		var us = "";
 		
-		const res = await conn.query("SELECT ID_evento, nombre, costo FROM eventos WHERE nombre = ?", [Evento1]);
+		const res = await conn.query("SELECT ID_evento, nombre_ev, costo FROM eventos WHERE nombre_ev = ?", [Evento1]);
 		const res2 = await conn.query("SELECT ID_cliente FROM clientes WHERE contacto_alt = ?", [sessi]);
 		
 		res.forEach((res) => {
@@ -245,7 +203,7 @@ exports.Camisas = (req, res) =>{
 
 		var montF = 0;
 		
-		const res = await conn.query("SELECT ID_art, costo , nombre FROM articulos WHERE nombre = ?", [Camisa1]);
+		const res = await conn.query("SELECT ID_art, costo , nombre_art FROM articulos WHERE nombre_art = ?", [Camisa1]);
 		const res2 = await conn.query("SELECT ID_cliente FROM clientes WHERE contacto_alt = ?", [sessi2]);
 		
 		res.forEach((res) => {
@@ -316,7 +274,7 @@ exports.Termos = (req, res) =>{
 
 		var montF = 0;
 		
-		const res = await conn.query("SELECT ID_art, costo , nombre FROM articulos WHERE nombre = ?", [Termo1]);
+		const res = await conn.query("SELECT ID_art, costo , nombre_art FROM articulos WHERE nombre_art = ?", [Termo1]);
 		const res2 = await conn.query("SELECT ID_cliente FROM clientes WHERE contacto_alt = ?", [sessi]);
 		
 		res.forEach((res) => {
@@ -385,7 +343,7 @@ exports.Invita = (req, res) =>{
 
 		var montF = 0;
 		
-		const res = await conn.query("SELECT ID_art, costo , nombre FROM articulos WHERE nombre = ?", [Invita1]);
+		const res = await conn.query("SELECT ID_art, costo , nombre_art FROM articulos WHERE nombre_art = ?", [Invita1]);
 		const res2 = await conn.query("SELECT ID_cliente FROM clientes WHERE contacto_alt = ?", [sessi]);
 		
 		res.forEach((res) => {
@@ -454,7 +412,7 @@ exports.Globos = (req, res) => {
 
 		var montF = 0;
 		
-		const res = await conn.query("SELECT ID_art, costo , nombre FROM articulos WHERE nombre = ?", [Globo1]);
+		const res = await conn.query("SELECT ID_art, costo , nombre_art FROM articulos WHERE nombre_art = ?", [Globo1]);
 		const res2 = await conn.query("SELECT ID_cliente FROM clientes WHERE contacto_alt = ?", [sessi]);
 		
 		res.forEach((res) => {

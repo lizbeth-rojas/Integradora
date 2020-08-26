@@ -36,8 +36,8 @@
             <nav class="nav-menu d-none d-lg-block">
               <ul>
                 <li class="active"><a href="/administrador">Administrador</a></li>
-                <li class="active"><a href="/MuestraArticulos">Pedidos Articulos</a></li>
-                <li><a href="/MuestraEventos">Pedidos Eventos</a></li>
+                <li class="active"><a href="/Ped_Art">Pedidos Articulos</a></li>
+                <li><a href="/tabla1">Pedidos Eventos</a></li>
                 {{#if logueado}}
                 <li class="drop-down"><a href="">{{ name }}</a>
                   <ul>
@@ -65,17 +65,25 @@
             <th style="text-align: center;">
               <h4>Cantidad</h4>
             </th>
-            <!--<th style="text-align: center;">
+            <th style="text-align: center;">
+              <h4>Tipo</h4>
+            </th><th style="text-align: center;">
               <h4>Concepto</h4>
-            </th>-->
+            </th>
             <th style=" text-align: center;">
               <h4>Descripcion</h4>
             </th> 
-          <!--  <th style="text-align: center;">
+            <th style="text-align: center;">
               <h4>Precio unitario</h4>
-            </th>-->
+            </th>
             <th style="text-align: center;">
               <h4>Total</h4>
+            </th>
+            <th style="text-align: center;">
+              <h4>Cliente</h4>
+            </th>
+            <th style="text-align: center;">
+              <h4>Fecha de Solicitud</h4>
             </th>      
           </tr>
         </thead>
@@ -83,10 +91,13 @@
           {{#each datos}}
             <tr>
               <td style="text-align: center;">{{unidades}}</td>
-              <td class=" text-right ">{{id_art}}</td>
+              <td class=" text-right;">{{descripcion_art}}</td>
+              <td class=" text-right ">{{nombre_art}}</td>
               <td class="text align: center;">{{descripcion}}</td>
-              <!--<td class=" text-right ">{{xunidad}}</td> -->
+              <td class=" text-right ">{{precio_unidad}}</td>
               <td class="text-right">{{monto}}</td>
+              <td class="text-right">{{nombre}}</td>
+              <td class="text-right">{{fecha}}</td>
             </tr>
           {{/each}}  
         </tbody>
@@ -195,20 +206,7 @@
     </div>
   </div>
 </div>
-{{#if logueado}}
-<hr>
-{{else}}
-<hr>
-<ul class="list-unstyled list-inline text-center py-2">
-  <li class="list-inline-item">
-    <a href="/crear-cuenta" class="btn btn-primary btn-rounded ejemplo2">Registrarse</a>
-  </li>
-  <li class="list-inline-item ">
-    <a href="" class="btn btn-danger btn-rounded ejemplo3" data-toggle="modal" data-target="#ModalCenter">Iniciar Sesion</a>
-  </li>
-</ul>
-<hr>
-{{/if}}
+
 <ul class="list-unstyled list-inline text-center">
   <li class="list-inline-item">
     <a class="btn-floating btn-fb mx-1" href="https://www.facebook.com/tinydesignsS">

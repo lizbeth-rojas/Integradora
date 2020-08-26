@@ -52,5 +52,4 @@ router.get('/tabla1', adminController.Ped_event);
 router.get('/Ped_Art', adminController.Ped_art);
 
 
-
 module.exports = router;
